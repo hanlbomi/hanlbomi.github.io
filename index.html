@@ -54,10 +54,10 @@
         <div class="header-content container">
             <h1 class="header-title">
                 <!-- <span class="up">HI!</span> -->
-                <span class="down">I'm Insung Jang</span>
-            </h1>
-            <p class="header-subtitle">Observational Astronomer / Data Scientist</p>            
-
+                
+                <span class="down">Insung Jang</span>            </h1>
+            <p class="header-subtitle">Observational Astronomer / Data Scientist</p>
+            <!--<span class="header-subtitle">Observational Astronomer / Data Scientist</span>-->
             <button class="btn btn-primary">Visit My Works</button>
         </div>              
     </header><!-- end of page header -->
@@ -69,16 +69,22 @@
             <!-- about wrapper -->
             <div class="about">
                 <div class="about-img-holder">
-                    <img src="assets/imgs/man.png" class="about-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    <div style="text-align: center;">
+                        <img src="assets/imgs/isjang.png" class="about-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" style="max-width: 60%; height: auto; margin-left: 100px;">
+                    </div>
+                        
                 </div>
                 <div class="about-caption">
                     <p class="section-subtitle">Who Am I ?</p>
                     <h2 class="section-title mb-3">About Me</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae aliquid ad provident aut fuga animi soluta quae eos non cupiditate voluptates dolorem, doloremque quos dicta quibusdam impedit iure nemo a iste 
+                        I am a Sr. Post-doctoral researcher at the University of Chicago with a particular expertise in massive data analysis in astronomy.
                         <br>culpa! Quasi quibusdam hic recusandae delectus velit officiis explicabo voluptatibus! Nemo esse similique, voluptates labore distinctio, placeat explicabo facilis molestias, blanditiis culpa iusto voluptatem ratione eligendi a, quia temporibus velit vero ipsa sint ex voluptatum expedita aliquid! Debitis, nam!              
                     </p>
-                    <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+                    <a href="resume.pdf" download>
+                      <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+                    </a>
+                    <!--<button class="btn-rounded btn btn-outline-primary mt-4" download="resume.pdf">Download CV</button>-->
                 </div>              
             </div><!-- end of about wrapper -->
         </div><!-- end of container -->
@@ -88,7 +94,7 @@
     <section class="section" id="service">
         <div class="container text-center">
             <p class="section-subtitle">What I Do ?</p>
-            <h6 class="section-title mb-6">Service</h6>
+            <h6 class="section-title mb-6">Data oriented science!</h6>
             <!-- row -->
             <div class="row">
                 <div class="col-md-6 col-lg-3">
@@ -301,6 +307,8 @@
         </div> <!-- end of container -->
     </section> <!-- end of testimonial section -->
     
+    
+    
     <!-- blog section -->
     <section class="section" id="blog">
         <!-- container -->
@@ -352,31 +360,38 @@
         </div><!-- end of container -->
     </section><!-- end of blog section -->
 
+    
+    
+    
+    
+
     <!-- contact section -->
     <section class="section" id="contact">
         <div class="container text-center">
             <p class="section-subtitle">How can you communicate?</p>
             <h6 class="section-title mb-5">Contact Me</h6>
             <!-- contact form -->
-            <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
+            <form action="send-email.php" method="POST" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <input type="text" size="50" class="form-control" placeholder="Your Name" required>                 
+                        <input type="text" size="50" class="form-control" placeholder="Your Name" name="name" required>
                     </div>
                     <div class="form-group col-sm-6">
-                        <input type="email" class="form-control" placeholder="Enter Email"requried>                 
+                        <input type="email" class="form-control" placeholder="Enter Email" name="email" required>
                     </div>
                     <div class="form-group col-sm-12">
-                        <textarea name="comment" id="comment" rows="6"   class="form-control" placeholder="Write Something"></textarea>
+                        <textarea name="message" id="message" rows="6" class="form-control" placeholder="Write Something" required></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
-                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">                  
+                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
                     </div>
-                </div>  
+                </div>
             </form><!-- end of contact form -->
         </div><!-- end of container -->
     </section><!-- end of contact section -->
-
+    
+    
+    
     <!-- footer -->
     <div class="container">
         <footer class="footer">       
