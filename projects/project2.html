@@ -84,13 +84,14 @@
   
                 <div class="about-caption" style="max-width: calc(100% - 12cm); text-align: justify; margin-top: 1cm;">
                     <p>
-                    To classify individual sources using the KNN algorithm, we needed a training sample with known classifications, which is part of supervised learning. For this purpose, we utilized the Hubble eXtreme Deep Field (HXDF), which is a deep field observed with the Hubble Space Telescope (HST). This field was chosen for its unique location in the sky, which is devoid of any nearby galaxies and bright stars, making all the sources in this field background galaxies (flag=0). This deep field provides an excellent dataset for training the KNN algorithm, as all the sources in this field can be considered as background galaxies.
+                    
+                    We utilized the Hubble eXtreme Deep Field (HXDF), which is a deep field observed with the Hubble Space Telescope (HST), to train the KNN algorithm. This field was chosen for its unique location in the sky, which is devoid of any nearby galaxies and bright stars, making all the sources in this field background galaxies (flag=0). This deep field provides an excellent dataset for training the KNN algorithm, as all the sources in this field can be considered as background galaxies.
                     <br>
                     <br>
-                    To make a list of point sources in the training set, we performed artificial star tests. Artificial stars with known point spread function (PSF) models were injected into the image, and we recovered them in the same way as the real objects in the HXDF were detected. By doing this, we created a training sample for point and extended sources, along with their photometric diagnostic parameters, such as error, sharpness, roundness, and crowding. These parameters were used to train the KNN classifier to identify and classify the sources in the HXDF accurately.
+                    To make a list of point sources (flag=1) in the training set, we performed artificial star tests. Artificial stars with known point spread function (PSF) models were injected into the image, and we recovered them in the same way as the real objects in the HXDF were detected. By doing this, we created a training sample for point and extended sources, along with their photometric diagnostic parameters, such as error, sharpness, roundness, and crowding. These parameters were used to train the KNN classifier to identify and classify the sources in the HXDF accurately.
                     <br>
                     <br>
-                    Once the KNN classifier was trained, we applied it to the photometry of the ESO410-G005 data. The machine was then able to classify stars and galaxies as shown below. This approach enabled us to classify sources in the ESO410-G005 data accurately, providing valuable insights into the properties and characteristics of the sources in this field. By using the HXDF as a training sample, we were able to create a reliable and accurate KNN classifier that could classify sources in other fields with similar characteristics. Overall, our study demonstrates the effectiveness of the KNN algorithm for classifying astronomical sources and highlights the importance of creating a good training sample to achieve accurate classification results.
+                    Once the KNN classifier was trained, we applied it to the photometry of the ESO410-G005 data. The machine was then able to classify stars and galaxies as shown below. This approach enabled us to classify sources in the ESO410-G005 data accurately, providing valuable into the properties and characteristics of the sources in this field. By using the HXDF as a training sample, we were able to create a reliable and accurate KNN classifier that could classify sources in other fields with similar characteristics. Overall, our study demonstrates the effectiveness of the KNN algorithm for classifying astronomical sources and highlights the importance of creating a good training sample to achieve accurate classification results (Jang et al. in preparation).
                     <br>
 
                     <br>
@@ -114,8 +115,8 @@
           <div class="about-caption text-center" style="margin-top: 0cm;">
             <figure class="figure text-center" style="margin-top: 0cm; width: 40%;">
               <img src="../assets/imgs/KNN_result.png" class="img-fluid" alt="n4258">
-                  <figcaption style="margin-left:1cm; width: calc(100% - 1cm); text-align: justify;">
-                      Results of the KNN star - galaxy classification.
+                  <figcaption style="margin-left:0cm; width: calc(100% - 0cm); text-align: justify;">
+                      The outcomes of the KNN classification. The candidates identified as stars and galaxies are respectively represented by green and red circles.
                       </figcaption>
             </figure>
           </div>
