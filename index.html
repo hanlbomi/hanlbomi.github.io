@@ -10,19 +10,41 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Meyawo main styles -->
 	<link rel="stylesheet" href="assets/css/meyawo.css">
+        
+
+        
+        <style>
+            .pale-blue-bg {
+                background-color: #F8F8FF;
+                width: 90%;
+                padding-top: 90%; /* Sets the height relative to the width (1:1 aspect ratio) */
+                position: relative;
+            }
+
+            .pale-blue-bg > * {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+        
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- Page Navbar -->
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
         <div class="container">
-            <!--<a class="logo" href="#">Meyawo</a>-->
+            <a class="logo" href="#">Insung Jang</a>
             <ul class="nav">
                 <li class="item">
                     <a class="link" href="#home">Home</a>
                 </li>
                 <li class="item">
                     <a class="link" href="#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#whatido">What I do?</a>
                 </li>
                 <li class="item">
                     <a class="link" href="#portfolio">Portfolio</a>
@@ -42,14 +64,25 @@
         <div class="header-content container">
             <h1 class="header-title">
                 <!-- <span class="up">HI!</span> -->
-                
+                <span class="up">HI!   I am </span>
                 <span class="down">Insung Jang</span>            </h1>
             <!--<p class="header-subtitle">Astronomer / <br> Data Scientist</p>-->
             <p class="header-subtitle">Research Data Scientist</p>
             <!--<p class="header-subtitle">Research Data Scientist <br> in Astrophysics</p>-->
             <!--<span class="header-subtitle">Observational Astronomer / Data Scientist</span>-->
             <!--<button class="btn btn-primary">Visit My Works</button>-->
-        </div>              
+        </div>
+        
+        
+        
+        <style>
+            .font-custom {
+                font-family: "Arial", sans-serif; /* Replace with your desired font */
+                font-size: 16px; /* Adjust the font size as needed */
+                font-weight: /* Adjust the font weight as needed */
+            }
+        </style>
+        
     </header><!-- end of page header -->
 
     
@@ -70,15 +103,17 @@
                     <p class="section-subtitle">Who Am I ?</p>
                     <h2 class="section-title mb-3">About Me</h2>
                     <p>
-                       I am a Research Data Scientist at the University of Chicago, specializing in observational astronomy. My research focuses on massive data reduction  (image processing and stellar photometry), along with statistical analysis of stellar photometric properties. My background is diverse, having grown up in East Asia (S. Korea) and spent four years in Europe (Germany), and settled down in the US (in the Windy City!).
-                           My professional interests lie in data analysis, and I have recently developed a keen interest in deep learning.
+                       I am a Research Data Scientist at the University of Chicago, specializing in observational astronomy. 
+                          <br>
+                          <br> With a background in engineering (BSc), physics (Ph.D), and data science (Post-doc),  I have acquired a wide range of skills and knowledge. Recently, I have developed a strong interest in machine learning.
                            <br>
-                           <br> I enjoy drinking coffee and beer, and traveling all around the world. Please don't hesitate to contact me if you have any questions.
+                           <br> I enjoy drinking coffee and beer, and traveling all around the world.
+                           <br> Please don't hesitate to contact me if you have any questions.
                            <br>
                            <br> hanlbomi(at)gmail.com
 
                     </p>
-                    <a href="assets/resume.pdf" download>
+                    <a href="assets/Resume_Jang.pdf" download>
                       <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
                     </a>
                     <!--<button class="btn-rounded btn btn-outline-primary mt-4" download="resume.pdf">Download CV</button>-->
@@ -90,27 +125,33 @@
     
     
     
+    
     <!-- service section -->
-    <section class="section" id="service">
+    <!--
+    <section class="section" id="whatido">
         <div class="container text-center">
             <p class="section-subtitle">What I Do ?</p>
             <h6 class="section-title mb-6">Data oriented science!</h6>
-            <!-- row -->
+
             <div class="row">
+                
+                
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/imgs/pencil-case.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
-                            <h6 class="title">Image processing</h6>
-                            <p class="subtitle">Aligning and Stacking of astronomical survey data</p>
+                            <img src="assets/imgs/quantitative.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Quantitative research</h6>
+                            <p class="subtitle">Numerical data analysis for hidden insights</p>
                         </div>
                     </div>
                 </div>
+                
+                
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/imgs/gaussian4.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon" style="width: 80px; height: 55px;">
-                            <h6 class="title">Stellar photometry</h6>
+                            <img src="assets/imgs/pencil-case.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon" style="width: 80px; height: 55px;">
+                            <h6 class="title">Image processing, <br>Photometry</h6>
                             <p class="subtitle">Stellar flux measurement. Simultaneous 2D Gaussian fits.</p>
                         </div>
                     </div>
@@ -128,15 +169,57 @@
                     <div class="service-card">
                         <div class="body">
                             <img src="assets/imgs/neural2.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
-                            <h6 class="title">Machine Learning</h6>
+                            <h6 class="title">Machine Learning Applicatoins</h6>
                             <p class="subtitle">Combining human and machine brains for higher productivity!</p>
                         </div>
                     </div>
                 </div>
-            </div><!-- end of row -->
+            </div>
         </div>
-    </section><!-- end of service section -->
+    </section>
+    -->
+    
+    
+    
+    
+    <section class="section" id="whatido">
+        <div class="container text-center">
+            <p class="section-subtitle">What I Do ?</p>
+            <h6 class="section-title mb-6">Data oriented science!</h6>
 
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="assets/imgs/quantitative.svg" alt="Quantitative research" class="icon">
+                            <h6 class="title">Quantitative research</h6>
+                            <p class="subtitle">Numerical data analysis for hidden insights</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="assets/imgs/pencil-case.svg" alt="Image processing, Photometry" class="icon" style="width: 80px; height: 55px;">
+                            <h6 class="title">Image processing, <br>Photometry</h6>
+                            <p class="subtitle">Big image data analysis in Astronomy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="assets/imgs/neural2.svg" alt="Machine Learning Applications" class="icon">
+                            <h6 class="title">Machine Learning Applications</h6>
+                            <p class="subtitle">Combining human and machine brains for higher productivity!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
     
     
@@ -144,39 +227,192 @@
     <section class="section" id="portfolio">
         <div class="container text-center">
             <p class="section-subtitle">What I Did ? (Click below)</p>
-            <h6 class="section-title mb-6">Portfolio</h6>
-            <!--<p style="margin-top: -1.6cm;">(Click below)</p> --> <!-- updated line of code -->
-            <!-- row -->
-            <!--<div class="row">-->
+            <h6 class="section-title mb-6">Portfolio 1 : Machine Learning Basics</h6>
             <div class="row justify-content-center">
-                <div class="col-md-4">
-                    <a href="projects/project1.html" class="portfolio-card">
-                        <img src="assets/imgs/folio-m101.jpg" class="portfolio-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Fun with stars!</h5>
-                                <p class="font-weight-normal">Category: Astronomy</p>
-                            </span>                         
-                        </span>                     
+
+                <div class="col-md-4 mb-4">
+                    <a href="projects/project_LR.html" class="portfolio-card">
+                        <div class="portfolio-card-square pale-blue-bg">
+                            <h4 class="portfolio-card-title">
+                                <span class="font-weight-normal">Linear Regression</span><br>
+                            </h4>
+                        </div>
                     </a>
                 </div>
-                <div class="col-md-4">
-                    <a href="projects/project2.html" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/folio-2.jpg" class="img-responsive rounded" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Supervised Learning</h5>
-                                <p class="font-weight-normal">Category: Data science</p>
-                            </span>                         
-                        </span>                         
+
+
+                <div class="col-md-4 mb-4">
+                    <a href="projects/project_KNN.html" class="portfolio-card">
+                        <div class="portfolio-card-square pale-blue-bg">
+                            <h4 class="portfolio-card-title">
+                                <span class="font-weight-normal">KNN</span><br>
+                                <!--<p class="font-custom">: K-Nearest Neighbors</p>       </h4> -->
+                        </div>
                     </a>
                 </div>
+
+
+                <div class="col-md-4 mb-4">
+                    <a href="projects/project_DT.html" class="portfolio-card">
+                        <div class="portfolio-card-square pale-blue-bg">
+                            <h4 class="portfolio-card-title">
+                                <span class="font-weight-normal">Decision Trees</span><br>
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+
                 
+                
+                <!--
+
+                <div class="col-md-4 mb-4">
+                    <a href="projects/project1.html" class="portfolio-card">
+                        <div class="portfolio-card-square pale-blue-bg">
+                            <h4 class="portfolio-card-title">
+                                <span class="font-weight-normal">Logistic Regression</span><br>
+
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-md-4 mb-4">
+                    <a href="projects/project1.html" class="portfolio-card">
+                        <div class="portfolio-card-square pale-blue-bg">
+                            <h4 class="portfolio-card-title">
+                                <span class="font-weight-normal">SVM</span><br>
+                                <p class="font-custom">: support vector machine</p>
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-md-4 mb-4">
+                    <a href="projects/project1.html" class="portfolio-card">
+                        <div class="portfolio-card-square pale-blue-bg">
+                            <h4 class="portfolio-card-title">
+                                <span class="font-weight-normal">K-means clustering</span><br>
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+                -->
+
             </div><!-- end of row -->
         </div><!-- end of container -->
     </section> <!-- end of portfolio section -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- portfolio section -->
+    
+    <!--
+    <section class="section" id="portfolio">
+        <div class="container text-center">
+            <h6 class="section-title mb-6">Portfolio 2 : Data Science For Business</h6>
+            <div class="row justify-content-center">
+
+                <div class="col-md-4 mb-4">
+                    <a href="projects/project_LR.html" class="portfolio-card">
+                        <div class="portfolio-card-square pale-blue-bg">
+                            <h4 class="portfolio-card-title">
+                                <span class="font-weight-normal">Linear Regression</span><br>
+                            </h4>
+                        </div>
+                    </a>
+                </div>
 
 
+                <div class="col-md-4 mb-4">
+                    <a href="projects/project_KNN.html" class="portfolio-card">
+                        <div class="portfolio-card-square pale-blue-bg">
+                            <h4 class="portfolio-card-title">
+                                <span class="font-weight-normal">KNN</span><br>
+                                <p class="font-custom">: K-Nearest Neighbors</p>                            </h4>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-md-4 mb-4">
+                    <a href="projects/project_DT.html" class="portfolio-card">
+                        <div class="portfolio-card-square pale-blue-bg">
+                            <h4 class="portfolio-card-title">
+                                <span class="font-weight-normal">Decision Trees</span><br>
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="w-500"></div>
+
+
+            </div>
+        </div>
+    </section>
+    -->
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- portfolio section -->
+    <section class="section" id="portfolio">
+        <div class="container text-center">
+            <h6 class="section-title mb-6">Portfolio 2 : Data Science in Astrohomy</h6>
+            <div class="row justify-content-center">
+
+                <div class="col-md-4 mb-4">
+                    <a href="projects/project_imageprossing.html" class="portfolio-card">
+                        <div class="portfolio-card-square pale-blue-bg">
+                            <h4 class="portfolio-card-title">
+                                <span class="font-weight-normal">Image Processing</span><br>
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-md-4 mb-4">
+                    <a href="projects/project_photometry.html" class="portfolio-card">
+                        <div class="portfolio-card-square pale-blue-bg">
+                            <h4 class="portfolio-card-title">
+                                <span class="font-weight-normal">Stellar Photometry</span><br>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-md-4 mb-4">
+                    <a href="projects/project_stargalaxy.html" class="portfolio-card">
+                        <div class="portfolio-card-square pale-blue-bg">
+                            <h4 class="portfolio-card-title">
+                                <span class="font-weight-normal">Star-Galaxy separation</span><br>
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="w-500"></div> <!-- Add a new row -->
+
+
+            </div><!-- end of row -->
+        </div><!-- end of container -->
+    </section> <!-- end of portfolio section -->
+    
+    
     
     
     
@@ -190,8 +426,9 @@
                 <div class="about-caption text-center">
                     <h2 class="section-title mb-3">Accomplishments</h2>
                     <p class="text-justify">
-                    <li>42 peer-reviewed journal articles (><a href="https://scholar.google.co.uk/citations?user=HGQXySMAAAAJ&hl=en&citsig=AMD79orQ7e9QJj7yArkGXdEOLQ7fLO2WDg" style="color: blue"; target="_blank">2000 citations</a>)</li>
-                    <li>11 first-author publications (>300 citations)</li>
+                    <li>42 peer-reviewed journal articles
+                        <!--(><a href="https://scholar.google.co.uk/citations?user=HGQXySMAAAAJ&hl=en&citsig=AMD79orQ7e9QJj7yArkGXdEOLQ7fLO2WDg" style="color: blue"; target="_blank">2000 citations</a>)</li>-->
+                    <li>11 first-author publications (><a href="https://scholar.google.co.uk/citations?user=HGQXySMAAAAJ&hl=en&citsig=AMD79orQ7e9QJj7yArkGXdEOLQ7fLO2WDg" style="color: blue"; target="_blank">300 citations</a>)</li>
                     <li>NASA/HST research grants (>$250k)</li>
                     <li>See also my <a href="https://github.com/hanlbomi" target="_blank">GitHub</a> repositories <img src="assets/imgs/github.png" alt="GitHub icon" width="20" height="20"></li>
 
@@ -203,7 +440,24 @@
     </section>
 
     
-    
+    <section class="section pt-0" id="about">
+        <div class="container text-center">
+            <div class="about">
+                <div class="about-caption text-center">
+                    <h2 class="section-title mb-3">Licenses & Certificates</h2>
+                    <p class="text-justify">
+                    <li>Machine Learning with Python [<a href="https://www.coursera.org/account/accomplishments/certificate/DWBRDPWU7QAB" style="color: blue"; target="_blank">IBM</a>]</li>
+                    <li>Python for Data Science, AI & Development [<a href="https://www.coursera.org/account/accomplishments/certificate/44F8MR5JUNAX" style="color: blue"; target="_blank">IBM</a>]</li>
+                    <li>Neural Networks and Deep Learning [<a href="https://www.coursera.org/account/accomplishments/certificate/P792D9X7FASS" style="color: blue"; target="_blank">DeepLearning.AI</a>]</li>
+                    <li>SQL for Data Science [<a href="https://www.coursera.org/account/accomplishments/certificate/NRK4BS5UNF48" style="color: blue"; target="_blank">UCDAVIS</a>]</li>
+                    
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
     
     
     
