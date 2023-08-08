@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Meyawo Landing page | Free Bootstrap 4.3.x landing page</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="../assets/css/meyawo.css">
+        
+        
+        
+    <title>Table Example</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+            
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 12px; /* Adjust the font size as per your preference */
+        }
+            
+        th {
+            background-color: #f2f2f2;
+        }
+            
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+            
+        tr:hover {
+            background-color: #e9e9e9;
+        }
+    </style>
+    
+    
+    
+    
+    <style>
+        #footnote {
+            text-align: left;
+            margin-left: 3cm;
+
+        }
+    </style>
+        
+        
+        
+
+</head>
+
+
+
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="../index.html"><span class="gray-text">Insung Jang</span></a>
+
+
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+
+    
+
+    <style>
+        .gray-text {
+            color: gray;
+        }
+    </style>
+
+    
+    
+    <section class="section pt-0" id="about">
+        <div class="container text-center">
+            <div class="about">
+                <div class="about-caption" style="max-width: calc(80% - 0cm); text-align: justify; padding-left: 3rem;">
+                    <h2 class="section-title mb-3" style="margin-top: 3cm;">K-nearest Neighbors (KNN)</h2>
+                    <p>
+                    K-nearest Neighbors (KNN) is a powerful supervised machine learning algorithm utilized for classification and regression tasks. It operates by predicting the class or value of a new data point by considering the K nearest neighbors in the training set, determined using a distance metric. KNN is a simple and intuitive algorithm, but its performance may become computationally expensive when dealing with large datasets. Additionally, selecting the appropriate value for K is crucial for achieving optimal performance.
+                    <br>
+                    <br>
+                    <span style="font-size: 1.3em; font-weight: bold;">Bank Marketing</span>
+                    <br>
+                    The dataset provided<sup><a href="#footnote">[1]</a></sup> is associated with direct marketing campaigns conducted by a Portuguese banking institution. These campaigns involved phone calls to assess whether clients would subscribe to the bank's term deposit product, indicated by the binary outcomes 'yes' or 'no.' The main objective of this classification task is to predict whether a client will subscribe to the term deposit, which is represented by the variable 'y.'<br><br>
+
+                    The dataset comprises 41,187 rows and 21 columns, containing a mix of numeric and non-numeric variables. The attributes can be categorized as follows:    <br>
+
+                    
+
+
+                    
+                    <div style="font-size: 1.0em; font-weight: bold; margin-bottom: 0;">
+                        Bank client data: </div>
+                    <ol style="font-size: 0.9em; margin-top: 0; margin-bottom: 0;">
+                        <li><strong>Age</strong> (numeric)</li>
+                        <li><strong>Job</strong>: type of job (categorical: 'admin.', 'blue-collar', 'entrepreneur', 'housemaid', 'management', 'retired', 'self-employed', 'services', 'student', 'technician', 'unemployed', 'unknown')</li>
+                        <!--<li><strong>Marital</strong>: marital status (categorical: 'divorced', 'married', 'single', 'unknown' ; note: 'divorced' means divorced or widowed)</li>-->
+                        <li><strong>Marital</strong>: marital status (categorical: 'divorced', 'married', 'single', 'unknown')</li>
+                        <li><strong>Education</strong> (categorical: 'basic.4y', 'basic.6y', 'basic.9y', 'high.school', 'illiterate', 'professional.course', 'university.degree', 'unknown')</li>
+                        <li><strong>Default</strong>: has credit in default? (categorical: 'no', 'yes', 'unknown')</li>
+                        <li><strong>Housing</strong>: has housing loan? (categorical: 'no', 'yes', 'unknown')</li>
+                        <li><strong>Loan</strong>: has personal loan? (categorical: 'no', 'yes', 'unknown')</li>
+                    </ol>
+                    <br>
+
+                    
+                    <div style="font-size: 1.0em; font-weight: bold; margin-bottom: 0;">
+                        Related with the last contact of the current campaign:
+                    </div>
+                    <ol style="font-size: 0.9em; margin-top: 0; margin-bottom: 0;" start="8">
+                        <li><strong>Contact</strong>: contact communication type (categorical: 'cellular','telephone')</li>
+                        <li><strong>Month</strong>: last contact month of year (categorical: 'jan', 'feb', 'mar', ..., 'nov', 'dec')</li>
+                        <li><strong>Day_of_week</strong>: last contact day of the week (categorical: 'mon','tue','wed','thu','fri')</li>
+                        <li><strong>Duration</strong>: last contact duration, in seconds (numeric). Important note: this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed. Also, after the end of the call y is obviously known. Thus, this input should only be included for benchmark purposes and should be discarded if the intention is to have a realistic predictive model.</li>
+                    </ol>
+                    <br>
+
+                    
+                    
+                    
+                    <div style="font-size: 1.0em; font-weight: bold; margin-bottom: 0;">
+                        Other attributes:
+                    </div>
+                    <ol style="font-size: 0.9em; margin-top: 0; margin-bottom: 0;" start="12">
+                        <li><strong>Campaign</strong>: number of contacts performed during this campaign and for
+                            this client (numeric, includes last contact)</li>
+                        <li><strong>Pdays</strong>: number of days that passed by after the client was last
+                            contacted from a previous campaign (numeric; 999 means client was not
+                            previously contacted)</li>
+                        <li><strong>Previous</strong>: number of contacts performed before this campaign and for
+                            this client (numeric)</li>
+                        <li><strong>Poutcome</strong>: outcome of the previous marketing campaign (categorical:
+                            'failure', 'nonexistent', 'success')</li>
+                    </ol>
+                    <br>
+
+                    
+                    
+                    
+                    <div style="font-size: 1.0em; font-weight: bold; margin-bottom: 0;">
+                        Social and economic context attributes:
+                    </div>
+                    <ol style="font-size: 0.9em; margin-top: 0; margin-bottom: 0;" start="16">
+                        <li><strong>Emp.var.rate</strong>: employment variation rate - quarterly indicator
+                            (numeric)</li>
+                        <li><strong>Cons.price.idx</strong>: consumer price index - monthly indicator (numeric)</li>
+                        <li><strong>Cons.conf.idx</strong>: consumer confidence index - monthly indicator
+                            (numeric)</li>
+                        <li><strong>Euribor3m</strong>: euribor 3 month rate - daily indicator (numeric)</li>
+                        <li><strong>Nr.employed</strong>: number of employees - quarterly indicator (numeric)</li>
+
+                    </ol>
+                    <br>
+                    
+                    <div style="font-size: 1.0em; font-weight: bold; margin-bottom: 0;">
+                        Output variable (desired target):
+                    </div>
+                    <ol style="font-size: 0.9em; margin-top: 0; margin-bottom: 0;" start="21">
+                        <li><strong>y</strong> - has the client subscribed a term deposit? (binary: 'yes', 'no')</li>
+                    </ol>
+                    <br>
+                    
+          
+          
+                    
+                    <br>
+                    <br>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>age</th>
+                                <th>job</th>
+                                <th>marital</th>
+                                <th>education</th>
+                                <th>default</th>
+                                <th>housing</th>
+                                <th>loan</th>
+                                <th>contact</th>
+                                <th>month</th>
+                                <th>...</th>
+                                <th>cons.conf.idx</th>
+                                <th>euribor3m</th>
+                                <th>nr.employed</th>
+                                <th>y</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>56</td>
+                                <td>housemaid</td>
+                                <td>married</td>
+                                <td>basic.4y</td>
+                                <td>no</td>
+                                <td>no</td>
+                                <td>no</td>
+                                <td>telephone</td>
+                                <td>may</td>
+                                <td>...</td>
+                                <td>-36.4</td>
+                                <td>4.857</td>
+                                <td>5191.0</td>
+                                <td>no</td>
+                            </tr>
+                            <tr>
+                                <td>57</td>
+                                <td>services</td>
+                                <td>married</td>
+                                <td>high.school</td>
+                                <td>unknown</td>
+                                <td>no</td>
+                                <td>no</td>
+                                <td>telephone</td>
+                                <td>may</td>
+                                <td>...</td>
+                                <td>-36.4</td>
+                                <td>4.857</td>
+                                <td>5191.0</td>
+                                <td>no</td>
+                            </tr>
+                            <tr>
+                                <td>37</td>
+                                <td>services</td>
+                                <td>married</td>
+                                <td>high.school</td>
+                                <td>no</td>
+                                <td>yes</td>
+                                <td>no</td>
+                                <td>telephone</td>
+                                <td>may</td>
+                                <td>...</td>
+                                <td>-36.4</td>
+                                <td>4.857</td>
+                                <td>5191.0</td>
+                                <td>no</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>admin.</td>
+                                <td>married</td>
+                                <td>basic.6y</td>
+                                <td>no</td>
+                                <td>no</td>
+                                <td>no</td>
+                                <td>telephone</td>
+                                <td>may</td>
+                                <td>...</td>
+                                <td>-36.4</td>
+                                <td>4.857</td>
+                                <td>5191.0</td>
+                                <td>no</td>
+                            </tr>
+                            <tr>
+                                <td>56</td>
+                                <td>services</td>
+                                <td>married</td>
+                                <td>high.school</td>
+                                <td>no</td>
+                                <td>no</td>
+                                <td>yes</td>
+                                <td>telephone</td>
+                                <td>may</td>
+                                <td>...</td>
+                                <td>-36.4</td>
+                                <td>4.857</td>
+                                <td>5191.0</td>
+                                <td>no</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+              
+                    
+                    
+                    <p>
+                    <br>
+                    (Note: The ellipsis (...) in the table represents additional columns not shown.)<br>
+                    <br>
+
+                    
+                    
+                    
+                    <div class="about-img-holder" style="margin-top: 0cm;">
+                        <div style="text-align: center;">
+                            <img src="./KNN_fig1.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 160%; height: auto; margin-left: 1cm;">
+                        </div>
+                    </div>
+                    
+                    <p>
+                    KNN measures numerical distance between variables and apply a classification.
+                    Given the presence of both numeric (e.g., age) and non-numeric variables (e.g., marital status, education), careful data preprocessing is essential. Non-numeric values must be converted into numerical representations using encoding techniques. However, one must avoid creating unintended mathematical relationships that could lead to incorrect conclusions. For example, converting weekdays to numeric values (e.g., Monday: 1, Tuesday: 2, Wednesday: 3) would introduce misleading mathematical relationships (e.g., 1 + 2 = 3) that do not hold meaningful differences. To address this concern, the categorical encoding function, such as <strong style="font-weight: bold;">pd.get_dummies()</strong> in Python, can be employed to maintain meaningful relations during the transformation.
+                    
+                    <br>
+                    <br>
+                    Furthermore, considering the relevance of attributes to the output variable "y," dropping some unnecessary variables like 'day_of_week,' 'contact,' 'month,' and 'duration' can enhance the model's efficiency and focus on the most influential features for the classification task.
+                    <br>
+                    <br>
+                    After preprocessing the data, the KNN algorithm can be applied. The dataset is split into two subsets: the training and testing datasets. The scikit-learn package's KNeighborsClassifier module is utilized for this purpose. The value of K is not fixed and can be optimized through experimentation. For this article, a value of 5 was tested, yielding the following performance metrics:
+                    
+               
+                    
+                    
+                    
+                    
+                    
+                    <div style="display: flex;">
+                      <div style="flex: 1; margin-right: 30px;">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>Variable</th>
+                              <th>Coefficient</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Train accuracy</td>
+                              <td>0.924</td>
+                            </tr>
+                            <tr>
+                              <td>Test accuracy</td>
+                              <td>0.902</td>
+                            </tr>
+                            <!--
+                            <tr style="border-top: 2px solid black;">
+                              <td>Train ROC</td>
+                              <td>0.668</td>
+                            </tr>
+                            <tr>
+                              <td>Test ROC</td>
+                              <td>0.612</td>
+                            </tr>
+                            -->
+                            <tr style="border-top: 2px solid black;">
+                              <td>Precision</td>
+                              <td>0.598</td>
+                            </tr>
+                            <tr>
+                              <td>Recall</td>
+                              <td>0.409</td>
+                            </tr>
+                            <tr>
+                              <td>F1 score</td>
+                              <td>0.486</td>
+                            </tr>
+                           
+                          </tbody>
+                        </table>
+                      </div>
+                      <div style="flex: 1;">
+                        <p>
+                        The train accuracy of 0.924 indicates that the model correctly predicted the outcome for approximately 92% of the samples in the training dataset. Similarly, the test accuracy of 0.902 implies that it correctly predicted the outcome for around 90% of the samples in the test dataset. These accuracy scores are both quite high and comparable, suggesting that the model performs well and robustly predicts whether clients will subscribe to the term deposit.
+                        <br>
+
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <p>
+                    <br>
+                    However, the precision score of 0.598 signifies that approximately 60% of instances classified as positive were correct, while 40% were false positives. On the other hand, the recall score of 0.409 indicates that the model correctly identified only about 41% of actual positive instances in the dataset, with the remaining positive instances misclassified as negative (false negatives).
+                    <br>
+                    <br>
+                    The F1 score<sup><a href="#footnote">[2]</a></sup> is a performance metric commonly used in binary classification tasks and it typically has a range of from 0 to 1, where an F1 score of 1 indicates perfect precision and recall.
+                    The F1 score of 0.486 further suggests that the model's overall performance may be relatively low, indicating challenges in accurately predicting positive instances while minimizing false positives and false negatives.
+                    <br>
+                    <br>
+                    
+                    To improve the model's performance, experimenting with different K values can be beneficial. By evaluating the model accuracy iteratively with a range of K values, the optimal K value can be identified. The analysis reveals that accuracy increases rapidly for K values smaller than 5, but after K = 12, the accuracy becomes almost constant. Selecting an appropriate K value close to 12 may lead to improved model performance with reduced computing time, as higher K values can be computationally expensive. At this K, precision is measured to be 65%.
+                    <br>
+                    <br>
+
+                    
+                    
+                    
+                    
+                    <div class="about-img-holder" style="margin-top: 0cm;">
+                        <div style="text-align: center;">
+                            <img src="./KNN_fig2.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 160%; height: auto; margin-left: 0cm;">
+                        </div>
+                    </div>
+                    <p>
+                    
+
+                    K-nearest Neighbors (KNN) is a valuable algorithm for classification tasks like predicting whether a client will subscribe to a bank's term deposit. By preprocessing the data, carefully encoding categorical variables, and selecting an appropriate K value, we can enhance the KNN model's accuracy and performance. However, further experimentation and tuning may be necessary to achieve even better results and optimize the model for this specific dataset.
+                    
+                    <br>
+                    <br>
+                    All the code used in this article can be found in the GitHub repository. <a href="https://github.com/hanlbomi" class="link"><i class="ti-github"></i></a>
+                    </p>
+                </div>
+            </div>
+        
+            
+    
+    </section>
+    
+    <p>
+    <span id="footnote"><sup>[1]</sup> http://archive.ics.uci.edu/dataset/222/bank+marketing</span>
+    <br>
+    <span id="footnote"><sup>[2]</sup> F1 score = 2 * (precision * recall) / (precision + recall)</span>
+
+    <!--
+    <span id="footnote"><sup>[1]</sup> <a href="https://www.kaggle.com/datasets/tawfikelmetwally/chicago-house-price" target="_blank">https://www.kaggle.com/datasets/tawfikelmetwally/chicago-house-price</a></span>
+    -->
+    <br>
+    <br>
+    
+    
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">DevCRUD</a></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>-->
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>-->
+                <!--<a href="javascript:void(0)" class="naver.com"><i class="ti-google"></i></a>-->
+                <!--<a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>-->
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>-->
+                <!--<a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>-->
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Meyawo Landing page | Free Bootstrap 4.3.x landing page</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="../assets/css/meyawo.css">
+        
+        
+        
+    <title>Table Example</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+            
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 12px; /* Adjust the font size as per your preference */
+        }
+            
+        th {
+            background-color: #f2f2f2;
+        }
+            
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+            
+        tr:hover {
+            background-color: #e9e9e9;
+        }
+    </style>
+    
+    
+    
+    
+    <style>
+        #footnote {
+            text-align: left;
+            margin-left: 3cm;
+
+        }
+    </style>
+        
+        
+        
+
+</head>
+
+
+
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="../index.html"><span class="gray-text">Insung Jang</span></a>
+
+
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+
+    
+
+    <style>
+        .gray-text {
+            color: gray;
+        }
+    </style>
+
+    
+    
+    <section class="section pt-0" id="about">
+        <div class="container text-center">
+            <div class="about">
+                <div class="about-caption" style="max-width: calc(80% - 0cm); text-align: justify; padding-left: 3rem;">
+                    <h2 class="section-title mb-3" style="margin-top: 3cm;">Decision Trees</h2>
+                    <p>
+                    Decision trees are a popular machine learning algorithm used for classification and regression tasks. They recursively split the data based on input features to create a tree-like structure. Each leaf node represents a prediction. Decision trees are easy to interpret but may suffer from overfitting, which can be mitigated using ensemble methods like Random Forests or Gradient Boosting. Despite their limitations, decision trees are widely used for their simplicity and ability to handle various data types.
+                    <br>
+                    <br>
+                    <span style="font-size: 1.3em; font-weight: bold;">Predicting Hotel Booking Demands</span>
+                    <br>
+                    Imagine yourself as a hotel manager receiving numerous booking reservations, including essential customer details like arrival dates, the number of guests, room preferences, and prices.
+                    It is common to anticipate some cancellations before guests arrive, leading to the consideration of overbooking to maximize profitability. However, accurately predicting the hotel's actual demand and optimizing the booking process is a challenging task.
+                    <br>
+                    <br>
+                    To address this, we simulate hotel booking demands using the dataset from the article "Hotel Booking Demand Datasets"<sup><a href="#footnote">[1]</a></sup>. This dataset consists of 41,187 rows and 32 columns, comprising a mix of numeric and non-numeric variables. The attributes can be categorized as below.
+                    <br>
+                    <br>
+
+                    We build a predictive model using decision trees to forecast the "<strong style="font-weight: bold;">is_canceled</strong>" attribute, which denotes whether a booking was canceled (1) or not (0), based on the remaining parameters.
+                    <br>
+                    <br>
+
+
+                    
+                    <div style="font-size: 1.0em; font-weight: bold; margin-bottom: 0;">
+                        Hotel Booking data: </div>
+                    <ol style="font-size: 0.9em; margin-top: 0; margin-bottom: 0;">
+                        <li><strong>Hotel</strong>: Resort Hotel (H1) or City Hotel (H2)</li>
+                        <li><strong>is_canceled</strong>: Booking was canceled (1) or not (0)</li>
+                        <li><strong>lead_time</strong>: N days that elapsed between the entering date of the booking and the arrival date</li>
+                        <li><strong>arrival_date_year</strong>: Year of arrival date</li>
+                        <li><strong>arrival_date_month</strong>: Month of arrival date</li>
+                        <li><strong>arrival_date_week_number</strong>: Week number of year for arrival date</li>
+                        <li><strong>arrival_date_day_of_month</strong>: Day of arrival date</li>
+                        <li><strong>stays_in_weekend_nights</strong>: N of weekend nights (Sat or Sun) the guest stayed or booked to stay at the hotel </li>
+                        <li><strong>stays_in_week_nights</strong>: N of week nights (Mon to Fri) the guest stayed or booked to stay at the hotel</li>
+                        <li><strong>adults</strong>: Number of adults</li>
+                        <li><strong>children</strong>: Number of children</li>
+                        <li><strong>babies</strong>: Number of babies</li>
+                        <li><strong>meal</strong>: Type of meal booked</li>
+                        <li><strong>country</strong>: Country of origin</li>
+                        <li><strong>market_segment</strong>: Market segment designation. Travel Agents (TA) and Tour Operators (TO)</li>
+                        <li><strong>distribution_channel</strong>: Booking distribution channel. Travel Agents (TA) and Tour Operators (TO)</li>
+                        <li><strong>is_repeated_guest</strong>: booking name from a repeated guest (1) or not (0)</li>
+                        <li><strong>previous_cancellations</strong>: N of previous bookings that were cancelled by the customer prior to the current booking</li>
+                        <li><strong>previous_bookings_not_canceled</strong>: N of previous bookings not cancelled by the customer prior to the current booking</li>
+                        <li><strong>reserved_room_type</strong>: Code of room type reserved.</li>
+                        <li><strong>assigned_room_type</strong>: Code for the type of room assigned to the booking. </li>
+                        <li><strong>booking_changes</strong>: N of changes made to the booking from the moment the booking was entered</li>
+                        <li><strong>deposit_type</strong>: Indication on if the customer made a deposit to guarantee the booking</li>
+                        <li><strong>agent</strong>: ID of the travel agency that made the booking</li>
+                        <li><strong>company</strong>: ID of the company that made the booking or responsible for paying the booking. </li>
+                        <li><strong>days_in_waiting_list</strong>: N of days the booking was in the waiting list before it was confirmed to the customer</li>
+                        <li><strong>customer_type</strong>: Type of booking, assuming one of four categories</li>
+                        <li><strong>adr</strong>: Average Daily Rate as defined by dividing the sum of all lodging transactions by the total number of staying nights</li>
+                        <li><strong>required_car_parking_spaces</strong>: N of car parking spaces required by the customer</li>
+                        <li><strong>total_of_special_requests</strong>: N of special requests made by the customer (e.g. twin bed or high floor)</li>
+                        <li><strong>reservation_status</strong>: Reservation last status. Check-out / Canceled / Other</li>
+                        <li><strong>reservation_status_date</strong>: Date at which the last status was set. </li>
+                    </ol>
+                    
+                    
+                    <!--
+                    <div style="font-size: 1.0em; font-weight: bold; margin-bottom: 0;">
+                        Bank client data: </div>
+                    <ol style="font-size: 0.9em; margin-top: 0; margin-bottom: 0;">
+                        <li><strong>Hotel</strong>: Resort Hotel (H1) or City Hotel (H2)</li>
+                        <li><strong>is_canceled</strong>: Value indicating if the booking was canceled (1) or not (0)</li>
+                        <li><strong>lead_time</strong>: Number of days that elapsed between the entering date of the booking into the PMS and the arrival date</li>
+                        <li><strong>arrival_date_year</strong>: Year of arrival date</li>
+                        <li><strong>arrival_date_month</strong>: Month of arrival date</li>
+                        <li><strong>arrival_date_week_number</strong>: Week number of year for arrival date</li>
+                        <li><strong>arrival_date_day_of_month</strong>: Day of arrival date</li>
+                        <li><strong>stays_in_weekend_nights</strong>: Number of weekend nights (Saturday or Sunday) the guest stayed or booked to stay at the hotel </li>
+                        <li><strong>stays_in_week_nights</strong>: Number of week nights (Monday to Friday) the guest stayed or booked to stay at the hotel</li>
+                        <li><strong>adults</strong>: Number of adults</li>
+                        <li><strong>children</strong>: Number of children</li>
+                        <li><strong>babies</strong>: Number of babies</li>
+                        <li><strong>meal</strong>: Type of meal booked. Categories are presented in standard hospitality meal packages: Undefined/SC – no meal</li>
+                        <li><strong>country</strong>: Country of origin. Categories are represented in the ISO 3155–3:2013 format</li>
+                        <li><strong>market_segment</strong>: Market segment designation. In categories, the term “TA” means “Travel Agents” and “TO” means “Tour Operators”</li>
+                        <li><strong>distribution_channel</strong>: Booking distribution channel. The term “TA” means “Travel Agents” and “TO” means “Tour Operators”</li>
+                        <li><strong>is_repeated_guest</strong>: Value indicating if the booking name was from a repeated guest (1) or not (0)</li>
+                        <li><strong>previous_cancellations</strong>: Number of previous bookings that were cancelled by the customer prior to the current booking</li>
+                        <li><strong>previous_bookings_not_canceled</strong>: Number of previous bookings not cancelled by the customer prior to the current booking</li>
+                        <li><strong>reserved_room_type</strong>: Code of room type reserved. Code is presented instead of designation for anonymity reasons</li>
+                        <li><strong>assigned_room_type</strong>: Code for the type of room assigned to the booking. Sometimes the assigned room type differs from the reserved room type due</li>
+                        <li><strong>booking_changes</strong>: Number of changes/amendments made to the booking from the moment the booking was entered on the PMS</li>
+                        <li><strong>deposit_type</strong>: Indication on if the customer made a deposit to guarantee the booking. This variable can assume three categories: No</li>
+                        <li><strong>agent</strong>: ID of the travel agency that made the booking</li>
+                        <li><strong>company</strong>: ID of the company/entity that made the booking or responsible for paying the booking. ID is presented instead of designation for</li>
+                        <li><strong>days_in_waiting_list</strong>: Number of days the booking was in the waiting list before it was confirmed to the customer</li>
+                        <li><strong>customer_type</strong>: Type of booking, assuming one of four categories: Contract - when the booking has an allotment or other type of</li>
+                        <li><strong>adr</strong>: Average Daily Rate as defined by dividing the sum of all lodging transactions by the total number of staying nights</li>
+                        <li><strong>required_car_parking_spaces</strong>: Number of car parking spaces required by the customer</li>
+                        <li><strong>total_of_special_requests</strong>: Number of special requests made by the customer (e.g. twin bed or high floor)</li>
+                        <li><strong>reservation_status</strong>: Reservation last status, assuming one of three categories: Canceled – booking was canceled by the customer; Check-Out</li>
+                        <li><strong>reservation_status_date</strong>: Date at which the last status was set. This variable can be used in conjunction with the ReservationStatus to</li>
+                    </ol>
+                    -->
+                    
+                    
+                    
+
+        
+          
+          
+                    
+                    <br>
+                    <br>
+
+
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th>hotel</th>
+                                    <th>is_canceled</th>
+                                    <th>lead_time</th>
+                                    <th>arrival_date_year</th>
+                                    <th>adults</th>
+                                    <th>children</th>
+                                    <th>babies</th>
+                                    <th>meal</th>
+                                    <th>country</th>
+                                    <th>market_segment</th>
+                                    <th>distribution_channel</th>
+                                    <th>deposit_type</th>
+                                    <th>agent</th>
+                                    <th>company</th>
+                                    <th>customer_type</th>
+                                    <th>adr</th>
+                                    <th>reservation_status</th>
+                                    <th>reservation_status_date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Resort Hotel</td>
+                                    <td>0</td>
+                                    <td>342</td>
+                                    <td>2015</td>
+                                    <td>2</td>
+                                    <td>0.0</td>
+                                    <td>0</td>
+                                    <td>BB</td>
+                                    <td>PRT</td>
+                                    <td>Direct</td>
+                                    <td>Direct</td>
+                                    <td>No Deposit</td>
+                                    <td>NaN</td>
+                                    <td>NaN</td>
+                                    <td>Transient</td>
+                                    <td>0.0</td>
+                                    <td>Check-Out</td>
+                                    <td>2015-07-01</td>
+                                </tr>
+                                <tr>
+                                    <td>Resort Hotel</td>
+                                    <td>0</td>
+                                    <td>737</td>
+                                    <td>2015</td>
+                                    <td>2</td>
+                                    <td>0.0</td>
+                                    <td>0</td>
+                                    <td>BB</td>
+                                    <td>PRT</td>
+                                    <td>Direct</td>
+                                    <td>Direct</td>
+                                    <td>No Deposit</td>
+                                    <td>NaN</td>
+                                    <td>NaN</td>
+                                    <td>Transient</td>
+                                    <td>0.0</td>
+                                    <td>Check-Out</td>
+                                    <td>2015-07-01</td>
+                                </tr>
+                                <tr>
+                                    <td>Resort Hotel</td>
+                                    <td>0</td>
+                                    <td>7</td>
+                                    <td>2015</td>
+                                    <td>1</td>
+                                    <td>0.0</td>
+                                    <td>0</td>
+                                    <td>BB</td>
+                                    <td>GBR</td>
+                                    <td>Direct</td>
+                                    <td>Direct</td>
+                                    <td>No Deposit</td>
+                                    <td>NaN</td>
+                                    <td>NaN</td>
+                                    <td>Transient</td>
+                                    <td>75.0</td>
+                                    <td>Check-Out</td>
+                                    <td>2015-07-02</td>
+                                </tr>
+                                <tr>
+                                    <td>Resort Hotel</td>
+                                    <td>0</td>
+                                    <td>13</td>
+                                    <td>2015</td>
+                                    <td>1</td>
+                                    <td>0.0</td>
+                                    <td>0</td>
+                                    <td>BB</td>
+                                    <td>GBR</td>
+                                    <td>Corporate</td>
+                                    <td>Corporate</td>
+                                    <td>No Deposit</td>
+                                    <td>304.0</td>
+                                    <td>NaN</td>
+                                    <td>Transient</td>
+                                    <td>75.0</td>
+                                    <td>Check-Out</td>
+                                    <td>2015-07-02</td>
+                                </tr>
+                                <tr>
+                                    <td>Resort Hotel</td>
+                                    <td>0</td>
+                                    <td>14</td>
+                                    <td>2015</td>
+                                    <td>2</td>
+                                    <td>0.0</td>
+                                    <td>0</td>
+                                    <td>BB</td>
+                                    <td>GBR</td>
+                                    <td>Online TA</td>
+                                    <td>TA/TO</td>
+                                    <td>No Deposit</td>
+                                    <td>240.0</td>
+                                    <td>NaN</td>
+                                    <td>Transient</td>
+                                    <td>98.0</td>
+                                    <td>Check-Out</td>
+                                    <td>2015-07-03</td>
+                                </tr>
+                            </tbody>
+                        </table>
+              
+                    
+                    
+                    <p>
+                    <br>
+                    (Note: The entire dataset is also available at Kaggle<sup><a href="#footnote">[2]</a></sup>)<br>
+                    <br>
+
+                    
+                    Out of the 32 columns, 20 columns consist of numerical data (integer or float), while the remaining 12 columns contain categorical data (object). Box plots below show global distributions of the numerical attributes.
+
+                    <br>
+                    <br>
+                    
+                    
+                    
+                    <div class="about-img-holder" style="margin-top: 0cm;">
+                        <div style="text-align: center;">
+                            <img src="./DT_fig1.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 160%; height: auto; margin-left: 1cm;">
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <br>
+                    <p>
+                    And now the 10 categorical attributes:
+                    <br>
+                    <br>
+                    
+                    <div class="about-img-holder" style="margin-top: 0cm;">
+                        <div style="text-align: center;">
+                            <img src="./DT_fig2.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 160%; height: auto; margin-left: 1cm;">
+                        </div>
+                    </div>
+                    
+                    <br>
+
+                    <p>
+                    Like other machine learning algorithms, decision tree classification requires data preprocessing to ensure accurate and reliable predictions. We follow these steps to prepare the data for training the decision tree classifier:                    <br>
+                    <br>
+                    1) Handling Null Values:<br>
+                    First, we identify any null values in the dataset and replace them with 0 (<code>df.fillna(0, inplace = True)</code>). However, it's important to note that there is no universal rule for replacing null values. Depending on the attribute and the context, null values may be replaced with other representations such as the mean or median.
+                    
+                    <br>
+
+                    <br>
+                    2) Selecting Relevant Attributes: <br>
+                    Not all attributes in the dataset are essential for predicting hotel booking demands. To improve the model's performance and efficiency, we drop some irrelevant columns, such as 'days_in_waiting_list', 'booking_changes', and 'reservation_status'.
+                    <br>
+
+                    <br>
+                    3) Handling Categorical Data:<br>
+                    Decision trees typically require numerical representations of categorical data. For the 'hotel' column, for example, we encode it as 0 for 'Resort Hotel' and 1 for 'City Hotel'. <!-- (<code>df['hotel'] = df['hotel'].map({'Resort Hotel' : 0, 'City Hotel' : 1})</code>). -->
+                    <br>
+                    <br>
+                    With the preprocessed data in hand, we proceed to apply the Decision Tree (DT) classifier using Scikit-Learn. To evaluate the model's performance, we split the data into two groups: a training set (70%) and a test set (30%). The decision tree is trained on the training set and then evaluated on the test set to assess its accuracy in predicting the "is_canceled" attribute. The outcome is summarized in the table below:
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div style="display: flex;">
+                      <div style="flex: 1; margin-right: 30px;">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>Variable</th>
+                              <th>Coefficient</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Accuracy</td>
+                              <td>0.85</td>
+                            </tr>
+                            <!--
+                            <tr style="border-top: 2px solid black;">
+                              <td>Train ROC</td>
+                              <td>0.668</td>
+                            </tr>
+                            <tr>
+                              <td>Test ROC</td>
+                              <td>0.612</td>
+                            </tr>
+                            -->
+                            <tr style="border-top: 2px solid black;">
+                            <tr>
+                                <td>Resort Hotel (= 0)</td>
+                            </tr>
+                              <td>Precision</td>
+                              <td>0.89</td>
+                            </tr>
+                            <tr>
+                              <td>F1 score</td>
+                              <td>0.88</td>
+                            </tr>
+                            <tr>
+                                <td>City Hotel (= 1)</td>
+                            </tr>
+                              <td>Precision</td>
+                              <td>0.80</td>
+                            </tr>
+                            <tr>
+                              <td>F1 score</td>
+                              <td>0.81</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div style="flex: 1;">
+                          
+                          
+                          
+                    <p>
+                    The DT classification achieves a reasonably high accuracy of 85%, meaning that the model correctly predicted the outcome for approximately 85% of the samples in the training dataset. The precision values are also high, indicating a low rate of false positives (20%~10%).
+                    <br>
+                    However, it's essential to note that the decision tree algorithm may lead to overfitting, as evident from the tree's depth of 47 layers with 21623 nodes (below). Careful consideration and fine-tuning of the model are crucial to properly apply the decision tree.
+                    <br>
+
+                    </p>
+                  </div>
+                </div>
+                    
+                    
+ 
+                        
+                <div class="about-img-holder" style="margin-top: 0cm;">
+                    <div style="text-align: center;">
+                           <img src="./DT_fig3.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 160%; height: auto; margin-left: 0cm;">
+                    </div>
+                </div>
+                    
+                <p>
+                        
+                To ensure a more interpretable and generalizable model, we applied various techniques such as pruning and limiting the tree's depth and minimum leaf node count. By setting the minimum number of leaf nodes to 800, which corresponds to approximately 1% of the total training samples, we obtained the following improved outcomes:
+                
+                        
+                        
+                        
+                        <div class="about-img-holder" style="margin-top: 0cm;">
+                            <div style="text-align: center;">
+                                    <img src="./DT_fig4.png" class="about-img" style="width: 160%; height: auto; margin-left: 0cm;">
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex;">
+                          <div style="flex: 1; margin-right: 30px;">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>Variable</th>
+                                  <th>Coefficient</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Accuracy</td>
+                                  <td>0.80</td>
+                                </tr>
+                                <tr style="border-top: 2px solid black;">
+                                <tr>
+                                    <td>Resort Hotel (= 0)</td>
+                                </tr>
+                                  <td>Precision</td>
+                                  <td>0.79</td>
+                                </tr>
+                                <tr>
+                                  <td>F1 score</td>
+                                  <td>0.86</td>
+                                </tr>
+                                <tr>
+                                    <td>City Hotel (= 1)</td>
+                                </tr>
+                                  <td>Precision</td>
+                                  <td>0.85</td>
+                                </tr>
+                                <tr>
+                                  <td>F1 score</td>
+                                  <td>0.68</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div style="flex: 1;">
+                        
+                        <p>
+                        
+                        
+                    
+                        The revised decision tree is now significantly simplified, with 16 layers and 141 nodes, offering enhanced interpretability without compromising the model's performance. The accuracy and precision metrics remain at an impressive 80% level.
+                        
+                        <br>
+                        <br>
+
+                        Despite the improvements achieved, it's essential to acknowledge that further optimization and fine-tuning could be beneficial. Exploring alternative ensemble methods like Random Forests or Gradient Boosting presents promising avenues to enhance predictive performance even further. Additionally, feature engineering and a more thoughtful selection of relevant attributes hold the potential to elevate the model's accuracy and interpretability to new heights.
+
+                        <br>
+
+                        </p>
+                      </div>
+                    </div>
+                    <p>
+
+
+                    <br>
+                    All the code used in this article can be found in the GitHub repository. <a href="https://github.com/hanlbomi" class="link"><i class="ti-github"></i></a>
+                    </p>
+                </div>
+            </div>
+        
+            
+    
+    </section>
+    
+    <p>
+    <span id="footnote"><sup>[1]</sup> https://www.sciencedirect.com/science/article/pii/S2352340918315191 (Nuno Antonio, Ana Almeida, and Luis Nunes)</span>
+    <br>
+
+    <span id="footnote"><sup>[1]</sup> https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand</span>
+
+    
+    
+    <br>
+
+    <!--
+    <span id="footnote"><sup>[1]</sup> <a href="https://www.kaggle.com/datasets/tawfikelmetwally/chicago-house-price" target="_blank">https://www.kaggle.com/datasets/tawfikelmetwally/chicago-house-price</a></span>
+    -->
+    <br>
+    <br>
+    
+    
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">DevCRUD</a></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>-->
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>-->
+                <!--<a href="javascript:void(0)" class="naver.com"><i class="ti-google"></i></a>-->
+                <!--<a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>-->
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>-->
+                <!--<a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>-->
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
+
+</body>
+</html>

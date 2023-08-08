@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Meyawo Landing page | Free Bootstrap 4.3.x landing page</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="../assets/css/meyawo.css">
+        
+        
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="../index.html"><span class="gray-text">Insung Jang</span></a>
+
+
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+
+    
+
+    <style>
+        .gray-text {
+            color: gray;
+        }
+    </style>
+
+    
+    
+    <section class="section pt-0" id="about">
+        <div class="container text-center">
+            <div class="about">
+                <div class="about-caption" style="max-width: calc(100% - 12cm); text-align: justify;">
+                    <h2 class="section-title mb-3" style="margin-top: 3cm;">Astronomical Image Processing</h2>
+                    <p>
+                    Astronomy heavily depends on image data, forming a cornerstone of its research.
+                    Astronomical observatories routinely capture a substantial volume of images every night, often amounting to several hundred gigabytes. The processing and management of these raw datasets necessitate adept technical skills. In this context, the realm of data science assumes a critical role due to the considerable challenge posed by the handling and analysis of such extensive data.
+                    <br>
+                    <br>
+                    Illustrated here is a representative demonstration of the processing of astronomical images, employing data sourced from the Hubble Space Telescope (HST). The Hubble Space Telescope orbits Earth, maintaining its reputation as one of the world's foremost telescopes, even three decades after its launch in 1990. Its exceptional performance, characterized by enhanced angular resolution, can be attributed to its strategic positioning in space, which successfully mitigates the atmospheric distortions that commonly affect ground-based telescopes.
+                    <br>
+                    <br>
+
+                    
+
+                    </p>
+                </div>
+                <div class="about-img-holder" style="margin-top: 5cm;">
+                    <div style="text-align: center;">
+                        <img src="./Imgpro_fig1.png" class="about-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" style="max-width: 100%; height: auto; margin-left: 1cm;">
+                        <figcaption style="margin-left:1cm; width: calc(100% - 0cm); text-align: justify;"> Hubble Space Telescope taken on the fifth servicing mission to the observatory in 2009.
+                            Credits: NASA </figcaption>
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+            
+            <div class="about">
+                
+                <div class="about-img-holder" style="margin-top: 1cm;">
+                    <div style="text-align: center;">
+                        <img src="./Imgpro_fig2.png" class="about-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" style="max-width: 100%; height: auto; margin-left: 0cm;">
+                        <figcaption style="margin-left:0cm; width: calc(100% - 0cm); text-align: justify;"> F435W (blue-channel) image of NGC 3370 taken from the Hubble Space Telescope. Each image has an exposure time of 1200s.  Stars (prominent objects at the image center) and cosmic rays (randomly distributed small dots) are seen.  </figcaption>
+                    </div>
+                </div>
+  
+  
+  
+                <div class="about-caption" style="max-width: calc(100% - 12cm); text-align: justify; margin-top: 1cm;">
+                    <p>
+                    The galaxy chosen here is NGC 3370, a disk galaxy at a distance of 100 Million light years (30 Mpc).
+                    This galaxy was observed with HST in 2006 in three filters: F435W (blue), F555W (green), and F814W (red).
+                    A large number of expousres have been made to detect faint stars: 8 in F435W, 55 in F555W, and 20 in F814W.
+                    The raw image data from the HST are publicly accessible and can be retrieved from the MAST archive<sup><a href="#footnote">[1]</a></sup>.
+                    <br>
+                    <br>
+                    The figure on the left is the HST view of NGC 3370 in blue channel (F435W).
+                    Two shots of the images have the same exposure time (1200s).
+                    It is seen that both images show two distinct sources: stars within the galaxy (bright objects in the image center) and cosmic rays (small, white dots scattered randomly aross the image).
+                    Additionally, a clear systematic irregularity is observable, with stars in the right image predominantly appearing in the upper region of the frame. A key objective of the astronomical image processing is to combine these individual exposures through a technique known as stacking, thereby enhancing the signal emitted by faint stars. This process involves aligning the individual images using the real stars in the image, while excluding cosmic rays.
+                    These stars serve as reference points, aiding in the assessment of offsets and the establishment of an alignment solution. The process of selecting reliable stars is a complex task and can be explored further in this post.
+                    
+                    </p>
+                </div>
+            </div>
+            
+            
+            
+            <br>
+            
+            <div class="about">
+                <div class="about-caption" style="max-width: calc(100% - 12cm); text-align: justify;">                    <p>
+                    After achieving alignment, the images can be combined to create a single deep image.
+                    Multiple software tools, such as IRAF/imred, Swarp, Astropy, and DrizzlePac, can perform this task. In this instance, DrizzlePac (Gonzaga et al. 2012), optimized for HST image processing, was utilized. On the right side, I present images displaying both the individual and stacked frames. A total of eight individual images (left) were combined to produce a single deep image on the right. The statistical technique of median calculation is typically employed to determine pixel values in the stacked frame, effectively excluding outlier pixel values such as hot pixels and cosmic rays. Notably, the stacked frame boasts an exposure time eight times longer (9600s) than that of the single frame (1200s), consequently revealing faint stars that remain indistinct in individual frames.
+                    <br>
+                    <br>
+                    The identical image processing methodology - encompassing source detection, image alignment, and stacking - can be equally applied to other channel datasets, namely the green (F555W) and red (F814W) channels. These pre-processed RGB channel data can be amalgamated to yield a resultant color image, as portrayed below. The image captures both the central and outer sectors of the galaxy. The inner region exhibits a tinge of yellow, indicating the prevalence of aged stars. Contrarily, the outer region takes on a bluish hue with delicate spiral arms, a characteristic trait of disk galaxies. In these regions, ongoing star formation is evident through the presence of numerous youthful stars. The image also captures a multitude of diminutive galaxies encircling NGC 3370, largely constituting background galaxies positioned much farther than NGC 3370.
+                    <br>
+                    <br>
+                    These processed images can be used for further analysis (e.g., stellar photometry) to derive structural and photometric properties of galaxies.
+                    
+                    </p>
+                </div>
+                <div class="about-img-holder" style="margin-top: 1cm;">
+                    <div style="text-align: center;">
+                        <img src="./Imgpro_fig3.png" class="about-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" style="max-width: 100%; height: auto; margin-left: 1cm;">
+                        <figcaption style="margin-left:1cm; width: calc(100% - 0cm); text-align: justify;"> A single (left) and stacked (right) frame images of NGC 3370. They are in the same band (F435W), but with  different exposure times (1200s vs. 9600s).</figcaption>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+
+            
+            
+            <div class="about-img-holder" style="margin-top: 0cm;">
+                <div style="text-align: center;">
+                    <img src="./Imgpro_fig4.png" class="about-img" style="width: 300%; height: auto; margin-left: 0cm;">
+                </div>
+            </div>
+            <p>
+            
+            
+
+            
+        </div>
+    </section>
+    
+    
+    
+    <p>
+    <span id="footnote"><sup>[1]</sup> https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html</span>
+    <br>
+
+
+    <br>
+    <br>
+    
+    
+    
+    
+    
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">DevCRUD</a></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>-->
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>-->
+                <!--<a href="javascript:void(0)" class="naver.com"><i class="ti-google"></i></a>-->
+                <!--<a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>-->
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>-->
+                <!--<a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>-->
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Meyawo Landing page | Free Bootstrap 4.3.x landing page</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="../assets/css/meyawo.css">
+        
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+    </nav><!-- End of Page Navbar -->
+
+    <head>
+    </head>
+    
+
+    
+
+    
+    <section class="section pt-0" id="about">
+      <div class="container text-center">
+        <div class="about">
+          <div class="about-caption text-center" style="margin-top: 3cm;">
+            <h2 class="section-title mb-3">Automated Star - Galaxy classification with KNN!</h2>
+            <figure class="figure text-center" style="margin-top: 2cm; width: 60%;">
+              <img src="../assets/imgs/ESO410-g005.png" class="img-fluid" alt="n4258">
+                  <figcaption style="margin-left:1cm; width: calc(100% - 1cm); text-align: justify;">
+                      Images of ESO410-G005, a dwarf spheroidal galaxy in the Sculptor group, has been captured by the Hubble Space Telescope. Resolved stars constitute the majority of the bright point sources visible within the galaxy. Additionally, extended sources have been detected, consisting primarily of background galaxies that are locaterd at a significantly greater distance from ESO410-G005. We need to classify them!
+                      </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    
+    <section class="section pt-0" id="about">
+        <div class="container text-center">
+            <div class="about">
+                <div class="about-caption text-center">
+                    <p class="text-justify" style="margin-top: -2cm; width: 70%; margin: 0 auto;">
+
+                    Astronomical imaging is a powerful tool for capturing celestial objects along the line of sight direction. However, when studying external galaxies, the resulting image contains not only the stars within the galaxy of interest but also background galaxies. This presents a challenge for researchers, as determining the distances to individual stellar objects is often difficult. As a result, classification based on image analysis alone is necessary.
+                    <br>
+                    <br>
+                    Sources within astronomical images can be classified into two broad categories: point sources (such as stars) and extended sources (such as background galaxies). Traditionally, photometric diagnostic parameters such as error, sharpness, and crowding parameters have been used to classify these sources. However, the classification accuracy of these methods is not always optimal, and there is often no definitive answer for classification.
+                    <br>
+                    <br>
+                    To improve the accuracy of source classification, researchers have recently explored the use of machine learning algorithms. One such algorithm is the K-Nearest Neighbors (KNN), which has shown promising results in classifying sources in astronomical images. KNN works by training the algorithm on a large dataset of known sources with known classifications. The algorithm then uses this training dataset to classify sources in new images. KNN's ability to handle complex relationships between parameters and its simplicity make it an attractive option for source classification in astronomical images.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    <section class="section pt-0" id="about">
+        <div class="container text-center">
+            <div class="about">
+                
+                <div class="about-img-holder" style="margin-top: 0cm;">
+                    <div style="text-align: center;">
+                        <img src="../assets/imgs/KNN_train.png" class="about-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" style="max-width: 90%; height: auto; margin-left: 0cm;">
+                        <figcaption style="margin-left:1cm; width: calc(85% - 0cm); text-align: justify;"> Making a training sample for the KNN test. Red and black dots indicate the confirmed extended (flag=0) and point sources (flag=1), repectively.
+                            </figcaption>
+                    </div>
+                </div>
+  
+  
+  
+                <div class="about-caption" style="max-width: calc(100% - 12cm); text-align: justify; margin-top: 1cm;">
+                    <p>
+                    
+                    We utilized the Hubble eXtreme Deep Field (HXDF), which is a deep field observed with the Hubble Space Telescope (HST), to train the KNN algorithm. This field was chosen for its unique location in the sky, which is devoid of any nearby galaxies and bright stars, making all the sources in this field background galaxies (flag=0). This deep field provides an excellent dataset for training the KNN algorithm, as all the sources in this field can be considered as background galaxies.
+                    <br>
+                    <br>
+                    To make a list of point sources (flag=1) in the training set, we performed artificial star tests. Artificial stars with known point spread function (PSF) models were injected into the image, and we recovered them in the same way as the real objects in the HXDF were detected. By doing this, we created a training sample for point and extended sources, along with their photometric diagnostic parameters, such as error, sharpness, roundness, and crowding. These parameters were used to train the KNN classifier to identify and classify the sources in the HXDF accurately.
+                    <br>
+                    <br>
+                    Once the KNN classifier was trained, we applied it to the photometry of the ESO410-G005 data. The machine was then able to classify stars and galaxies as shown below. This approach enabled us to classify sources in the ESO410-G005 data accurately, providing valuable into the properties and characteristics of the sources in this field. By using the HXDF as a training sample, we were able to create a reliable and accurate KNN classifier that could classify sources in other fields with similar characteristics. Overall, our study demonstrates the effectiveness of the KNN algorithm for classifying astronomical sources and highlights the importance of creating a good training sample to achieve accurate classification results (Jang et al. in preparation).
+                    <br>
+
+                    <br>
+
+                    </p>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    
+    
+    
+    
+    
+
+    <section class="section pt-0" id="about">
+      <div class="container text-center">
+        <div class="about">
+          <div class="about-caption text-center" style="margin-top: 0cm;">
+            <figure class="figure text-center" style="margin-top: 0cm; width: 40%;">
+              <img src="../assets/imgs/KNN_result.png" class="img-fluid" alt="n4258">
+                  <figcaption style="margin-left:0cm; width: calc(100% - 0cm); text-align: justify;">
+                      The outcomes of the KNN classification. The candidates identified as stars and galaxies are respectively represented by green and red circles.
+                      </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    
+    
+    
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">DevCRUD</a></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>-->
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>-->
+                <!--<a href="javascript:void(0)" class="naver.com"><i class="ti-google"></i></a>-->
+                <!--<a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>-->
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>-->
+                <!--<a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>-->
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
+
+</body>
+</html>
