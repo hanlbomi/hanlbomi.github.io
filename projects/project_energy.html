@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Meyawo Landing page | Free Bootstrap 4.3.x landing page</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="../assets/css/meyawo.css">
+        
+        
+        
+    <title>Table Example</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+            
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 12px; /* Adjust the font size as per your preference */
+        }
+            
+        th {
+            background-color: #f2f2f2;
+        }
+            
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+            
+        tr:hover {
+            background-color: #e9e9e9;
+        }
+    </style>
+    
+    
+    
+    
+    <style>
+        #footnote {
+            text-align: left;
+            margin-left: 3cm;
+
+        }
+    </style>
+        
+        
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="../index.html"><span class="gray-text">Insung Jang</span></a>
+
+
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+
+    
+
+    <style>
+        .gray-text {
+            color: gray;
+        }
+    </style>
+
+    
+    
+    <section class="section pt-0" id="about">
+        <div class="container text-center">
+            <div class="about">
+                <div class="about-caption" style="max-width: calc(80% - 0cm); text-align: justify; padding-left: 3rem;">
+                    <h2 class="section-title mb-3" style="margin-top: 3cm;">Energy Supply</h2>
+                    <p>
+                    Electricity demand changes throughout the day, but it's tough for power plants to quickly make more or less electricity when demand suddenly goes up or down. This is where pricing plans like hourly pricing help. They encourage people to use electricity when it costs less and to save it during the expensive times.
+                    <br>
+                    <br>
+                    <span style="font-size: 1.3em; font-weight: bold;">Hourly Pricing by ComEd</span>
+                    <br>
+
+                   
+                   
+                   
+                   <div style="display: flex;">
+                     <div style="flex: 1; margin-right: 30px;">
+                       <table>
+                         <thead>
+                           <tr>
+                             <th>ID</th>
+                             <th>Time (in millis, UTC)</th>
+                             <th>Price (cent/kWh)</th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                           <tr>
+                             <td>1</td>
+                             <td>1696136400000</td>
+                             <td>1.2</td>
+                           </tr>
+                           <tr>
+                             <td>2</td>
+                             <td>1696136100000</td>
+                             <td>1.2</td>
+                           </tr>
+                           <tr>
+                             <td>3</td>
+                             <td>1696135800000</td>
+                             <td>1.1</td>
+                           </tr>
+                           <tr>
+                             <td>4</td>
+                             <td>1696135500000</td>
+                             <td>1.3</td>
+                           </tr>
+                           <tr>
+                             <td>5</td>
+                             <td>1696135200000</td>
+                             <td>1.1</td>
+                           </tr>
+                           <tr>
+                             <td>...</td>
+                             <td>...</td>
+                             <td>...</td>
+                           </tr>
+                           <tr>
+                             <td>1131405</td>
+                             <td>1351485000000</td>
+                             <td>1.3</td>
+                           </tr>
+                           <tr>
+                             <td>1131406</td>
+                             <td>1351484400000</td>
+                             <td>1.4</td>
+                           </tr>
+                         </tbody>
+                       </table>
+                     </div>
+                     <div style="flex: 1;">
+                       <p>
+                       ComEd's Hourly Pricing is a way to buy electricity at different prices throughout the day.
+                       By using electricity when it's cheaper, you can save money on your monthly bills.
+                       On average, people can save about 15% compared to ComEd's regular fixed-price rate <sup><a href="#footnote">[1]</a></sup>.
+                       <br>
+                       <br>
+                       
+                       <strong>Data and Analysis</strong>
+
+                       <br>
+                       ComEd gives data with 5-minute prices <sup><a href="#footnote">[2]</a></sup>.
+                       This helps us understand hourly prices better. I got this data starting from 2013.
+                       It has two columns: time (in milliseconds) and price (in cents).
+                       There are 1.1 million rows, which is a lot of data (32 GB).
+                       Since the data only has two things (time and price), I looked at how the price changes over time.
+                       
+                       
+                       
+ 
+                     </div>
+                   </div>
+             
+                    
+                    
+                    
+                    <p>
+                    <br>
+                    
+                    
+                    <div class="about-img-holder" style="margin-top: 0cm;">
+                        <div style="text-align: center;">
+                            <img src="./energy_fig1.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 160%; height: auto; margin-left: 1cm;">
+                        </div>
+                    </div>
+                    
+                    <p>
+                    The chart above shows ComEd's energy prices over the last 10 years, and we noticed a few things.
+                    
+                    Because the data is only two dimensional (e.g., time and price), I explored the variation of the price as a function of time. I read the using Pandas/Python and binned the price into every month.
+                    The figure above shows the ComEd energy price in the past 10 years. A few features are noted.
+                    
+                    
+                    <ul style="font-size: 0.9em;">
+                        <li>Over the last 10 years, energy prices were usually about 3 cents/kWh, with some ups and downs. It wasn't always going up or down.<br><br>
+                        
+                        <li>Prices got unstable from early 2020 to late 2022 because of COVID-19. The pandemic changed everything, and the energy supply became shaky, which made prices go up. Prices went up a bit at the start of the pandemic because of the economic slowdown. Prices rose quickly in 2021-2022 due to actions by the US Federal Reserve. This is shown by the US Consumer Price Index (CPI) data.<br><br>
+                        
+                        <li>There's a noticeable bump in 2014, but it doesn't match a big drop in oil prices in 2014<sup><a href="#footnote">[3]</a></sup>. This needs more research.<br><br>
+                        
+                        <li>After the pandemic, energy prices went back to normal or even lower than the 10-year average.<br><br>
+                        
+                    
+                    </ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="about-img-holder" style="margin-top: 0cm;">
+                        <div style="text-align: center;">
+                            <img src="./energy_fig2.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 160%; height: auto; margin-left: 1cm;">
+                        </div>
+                    </div>
+                    
+                    <p>
+                    I looked at monthly averaged energy prices within a year, and here are two things I found:
+                    
+                    
+                    <ul style="font-size: 0.9em;">
+                        <li>Energy prices stayed pretty stable in one year. They didn't shoot up during any specific season.
+                            <br><br>
+                            
+                        <li> The pandemic was different. At the start (2020), prices were lower, but in the middle and late parts of the pandemic, they went higher.
+                            
+
+                    </ul>
+                    
+                    
+                    
+                    <div class="about-img-holder" style="margin-top: 0cm;">
+                        <div style="text-align: center;">
+                            <img src="./energy_fig3.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 160%; height: auto; margin-left: 1.5cm;">
+                        </div>
+                    </div>
+                    <p>
+                    
+
+                    <p>
+                    Energy prices in a day were divided into four seasons: spring, summer, fall, and winter.
+                    I used data from the past 10 years, excluding the pandemic period (2020-2022), to see how prices change hourly.
+                    
+                    <ul style="font-size: 0.9em;">
+                        <li>Three seasons (Spring, Fall, and Winter) had similar prices during the day (from 6 am to 8 pm) at around 3 cents/kWh. At night, prices dropped by about 30%. <br><br>
+                            
+                        <li> Summer was different. Prices went up to 4 cents/kWh during the day, which was higher than the other seasons. In the morning, they were cheaper.
+                    </ul>
+                    
+                    <br>
+                    <br>
+
+                    Key Insights
+                    
+                    <ul style="font-size: 0.9em;">
+                        <li>Energy prices stayed quite steady over the past 10 years, except during special times like the pandemic. This suggests that ComEd did a good job supplying energy to the community. <br><br>
+                            
+                        <li> People can save money by using electricity during cheaper nighttime hours, around $20 to $30 per month. You can use your washing machine, dryer, and charge your electric vehicle at night to save.
+                            <br><br>
+                            
+                        <li> The data only has two things (time and price). Adding more data, like energy use by age, region, or family, can help create better models in the future.
+                    </ul>
+                </div>
+            </div>
+        
+            
+    
+    </section>
+    
+    
+    <span id="footnote"><sup>[1]</sup> https://www.comed.com/WaysToSave/ForYourHome/Pages/HourlyPricing.aspx</span><br>
+    <span id="footnote"><sup>[2]</sup> https://hourlypricing.comed.com/hp-api</span><br>
+    <span id="footnote"><sup>[3]</sup>     https://www.bls.gov/opub/btn/volume-4/pdf/the-2014-plunge-in-import-petroleum-prices-what-happened.pdf
+</span>
+    <!--
+    <span id="footnote"><sup>[1]</sup> <a href="https://www.kaggle.com/datasets/tawfikelmetwally/chicago-house-price" target="_blank">https://www.kaggle.com/datasets/tawfikelmetwally/chicago-house-price</a></span>
+    -->
+    <br>
+    <br>
+    
+    
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">DevCRUD</a></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>-->
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>-->
+                <!--<a href="javascript:void(0)" class="naver.com"><i class="ti-google"></i></a>-->
+                <!--<a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>-->
+                <!-- <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>-->
+                <!--<a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>-->
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
+
+</body>
+</html>
