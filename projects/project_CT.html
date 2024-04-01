@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Meyawo Landing page | Free Bootstrap 4.3.x landing page</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+    <link rel="stylesheet" href="../assets/css/meyawo.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 12px; /* Adjust the font size as per your preference */
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e9e9e9;
+        }
+
+        #footnote {
+            text-align: left;
+            margin-left: 3cm;
+        }
+
+        #expandable-image {
+            display: none; /* Hide the image initially */
+        }
+
+        .expanded {
+            display: block !important; /* Show the image when expanded */
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="../index.html"><span class="gray-text">Insung Jang</span></a>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+    <section class="section pt-0" id="about">
+        <div class="container text-center">
+            <div class="about">
+                <div class="about-caption" style="max-width: calc(80% - 0cm); text-align: justify; padding-left: 3rem;">
+                    <h2 class="section-title mb-3" style="margin-top: 3cm;">Pneumonia (폐렴) detection using CNN</h2>
+                    <p>
+                    Since the onset of the COVID-19 pandemic, there has been a surge of interest and urgency in healthcare advancements. COVID-19 primarily targets the respiratory system, often leading to pneumonia, heightening the significance of pneumonia detection. Given the complexity of diagnosing pneumonia and the expertise required, automation of the detection process has become increasingly crucial.
+                    <br><br>
+                    Convolutional Neural Network (CNN) is a deep learning algorithm widely used for image recognition and processing tasks. It employs convolutional layers to extract features from input images and reduce computational complexity. Through layers like pooling and fully connected layers, CNNs learn hierarchical representations, enabling them to recognize patterns in images with translation invariance.
+                    Here we use CNNs to develop the Pneumonia detection model.
+                    <br>
+                    <br>
+                    <span style="font-size: 1.3em; font-weight: bold;">Data & Data Preprocessing</span>
+                    <br>
+
+                    The dataset used for training and testing our CNN model was sourced from Nuno Antonio et al. (2018)<sup><a href="#footnote">[1]</a></sup>, titled "Labeled Optical Coherence Tomography (OCT) and Chest X-Ray Images for Classification." This dataset comprises approximately 6000 labeled chest X-Ray scans, where the labels indicate whether pneumonia is present (0, PNEUMONIA) or absent (1, NORMAL). Since the X-ray images were pre-processed by the authors, no additional data cleaning steps were required (it saves a lot of time!)
+
+
+                    <div class="about-img-holder" style="margin-top: 0cm;">
+                        <div style="text-align: center;">
+                            <img src="./CT_fig1.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 160%; height: auto; margin-left: 1cm;">
+                        </div>
+                    </div>
+                    <p>
+                    A simple statistics found that 1583 (27%) and 4273 (73%) images were labeled as Positive (PNEUMONIA) and Negative (NORMAL), respectively.
+
+                    <div class="about-img-holder" style="margin-top: 0cm;">
+                        <div style="text-align: center;">
+                            <img src="./CT_fig2.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 160%; height: auto; margin-left: 1cm;">
+                        </div>
+                    </div>
+
+                    <p>
+
+                    Before deploying the CNN model, it's crucial to preprocess the input images. This involves several key steps:
+                    <br>
+                    <ol>
+                        <li><strong>Standardizing Image Dimensions</strong>: Images have different XY dimensions ranging from 500 to 1500 pixels. We standardized all images to a uniform size of 150 x 150 pixels (e.g., cv2.resize).</li><br>
+                        <li><strong>Normalizing Pixel Values</strong>: Images may exhibit differing dynamic ranges of pixel values. To ensure consistency, we normalized the pixel values to a range between 0 and 1.</li><br>
+                        <li><strong>Dataset Splitting</strong>: The input dataset was divided into three subsets: training, testing, and validation sets. This partitioning ensures that the model is trained on a sufficiently large dataset while also being validated and tested on separate, unseen data to assess its generalization performance effectively.</li><br>
+                        <li><strong>Data Argumentation</strong>: Overfitting is a common challenge in CNN training, potentially hindering model performance. To mitigate overfitting, we adopted data augmentation techniques. By artificially introducing variations to the training dataset such as zooming, rotation, and vertical/horizontal shifts, we enhanced the dataset's diversity. This was accomplished using the ImageDataGenerator in Keras, thereby bolstering the model's robustness and resilience to overfitting. </li>
+                    </ol>
+                    <p>
+                    With the preprocessed images, we split the input dataset into three subsets: train (N=5216), test (N=624), and validation (N=16). The train and test sets are mandatory for evaluating model performance, while the validation set serves as an integral component of the training process. It aids in parameter selection and helps prevent overfitting of the model being built. This systematic approach ensures that our CNN model is not only trained on diverse data but also validated and fine-tuned for optimal performance in pneumonia detection.
+                    
+                    
+
+                    <div class="about-img-holder" style="margin-top: 0cm;">
+                        <div style="text-align: center;">
+                            <img src="./CT_fig3.png" class="about-img" id="expandable-image" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 100%; height: auto; margin-left: 1cm;">
+                            <button id="expand-icon">Click here to see the CNN model architecture</button>
+                        </div>
+                    </div>
+                    <br>
+                    <p>
+                    Keras is a high-level deep learning API for TensorFlow in Python, providing a user-friendly interface for building and training neural networks.
+                    Its has a modular structure that allows for easy model building by stacking layers.
+                    The CNN model used in this study consists of 7 layers as follows(click the link above for its schematic view).
+                    <br>
+                    <ol>
+
+                      <li><strong>Conv2D Layer</strong>: extracts features from input images. There are 32 filters with a kernel size of (3,3)</li>
+                      <li><strong>BatchNormalization Layer</strong>: stabilizes the training process by normalizing the activations of each batch</li>
+                      <li><strong>MaxPooling2D Layer</strong>: downsamples the feature maps, reducing computational cost and increasing the invariance of extracted features</li>
+                      <li><strong>Flatten Layer</strong>: flattens the 3D feature maps into a 1D array, preparing them for the fully connected layers</li>
+                      <li><strong>Dense Layer</strong>: fully connected hidden layer with 128 neurons.</li>
+                      <li><strong>Dropout Layer</strong>: randomly deactivating a fraction of neurons during training to prevent overfitting</li>
+                      <li><strong>Dense Layer (Output Layer)</strong>: final layer of the model, responsible for binary classification</li>
+
+                      <!-- Add more items as needed -->
+                    </ol>
+                    <p>
+                    <!--
+                    Pooling layers help reduce the spatial dimensions of the feature maps, leading to a decrease in computational complexity.
+                    Dropout layers are used to prevent overfitting by randomly deactivating a fraction of neurons during training.
+                    It is noted that there is no general rule for designing the CNN network (e.g., number of layers).
+                    In general, we obtain initial result with the base CNN network and improve its model performance by tweaking the details of the network (i.e., hyperparameter tuning).
+                    -->
+                    
+                    
+                    The model training took 10 minutes on my machine (3.3 GHz 12-Core Intel Xeon W on MacPro).
+                    We set epoch = 20 and the model accuracy converged rapidly after the first 4 epochs.
+                    
+                    
+                    
+                    
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="about-img-holder" style="margin-top: 0cm;">
+                                    <div style="text-align: center;">
+                                        <img src="./CT_fig4.png" class="about-img" alt="Figure 4" style="width: 100%; height: auto; margin-left: 1cm;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="about-img-holder" style="margin-top: 0cm;">
+                                    <div style="text-align: center;">
+                                        <img src="./CT_fig5.png" class="about-img" alt="Figure 5" style="width: 90%; height: auto; margin-left: 1cm;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>
+                    After training the CNN model, evaluation on the test set reveals promising results. The training accuracy steadily increases, reaching 93% after 10 epochs, indicating successful classification of the majority of training samples. However, it's essential to assess its performance on unseen data to gauge its generalization capability accurately.
+                    <br><br>
+                    The confusion matrix demonstrates the model's performance on the test set. Out of 624 samples, 523 were correctly classified. Specifically, the model correctly identified 380 pneumonia-positive (PP) cases and 143 pneumonia-negative (NN) cases. This translates to an overall accuracy of 84%.
+                    <br><br>
+                    A notable observation is the slight decrease in accuracy from training (93%) to testing (84%). Such a discrepancy often suggests overfitting, where the model learns to memorize training data rather than generalize well to unseen instances. This emphasizes the importance of techniques like data augmentation and adding more dropout layers to combat overfitting.
+                
+                    <br><br>
+                    In conclusion, the CNN model exhibits promising capabilities in pneumonia detection from chest X-ray images. While achieving a commendable accuracy of 84% on the test set, there remains room for refinement and optimization. By addressing overfitting concerns and exploring advanced methodologies, we aim to develop even more robust and accurate models for enhanced healthcare diagnostics.
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
+
+    <script>
+        document.getElementById("expand-icon").addEventListener("click", function() {
+            var image = document.getElementById("expandable-image");
+            if (image.classList.contains("expanded")) {
+                image.classList.remove("expanded");
+            } else {
+                image.classList.add("expanded");
+            }
+        });
+    </script>
+</body>
+</html>
