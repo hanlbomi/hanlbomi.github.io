@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Meyawo Landing page | Free Bootstrap 4.3.x landing page</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+    <link rel="stylesheet" href="../assets/css/meyawo.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 12px; /* Adjust the font size as per your preference */
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e9e9e9;
+        }
+
+        #footnote {
+            text-align: left;
+            margin-left: 3cm;
+        }
+
+        #expandable-image {
+            display: none; /* Hide the image initially */
+        }
+
+        .expanded {
+            display: block !important; /* Show the image when expanded */
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="../index.html"><span class="gray-text">Home</span></a>
+
+
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+    
+    
+    <style>
+        .gray-text {
+            color: gray;
+        }
+    </style>
+    
+    
+    <section class="section pt-0" id="about">
+        <div class="container text-center">
+            <div class="about">
+                <div class="about-caption" style="max-width: calc(80% - 0cm); text-align: justify; padding-left: 3rem;">
+                    <h2 class="section-title mb-3" style="margin-top: 3cm;">Basics of the Time-Series Data Analysis</h2>
+                    <p>
+                    Time-series data analysis is essential in data science for understanding trends, patterns, and seasonal variations over time.
+                    It enables forecasting future behavior, detecting anomalies, and developing predictive models across various domains, driving informed decision-making processes.
+                    <br>
+                    In this portfolio, we show an example of a typical time-series analysis applied to the Walmart sales data.
+                    <br>
+                    <br>
+                    <span style="font-size: 1.3em; font-weight: bold;">Datasets</span>
+                    <br>
+                    The input dataset is composed of three tables: <b>store.csv</b>, <b>train.csv</b>, <b>features.csv</b><br>
+                    <br>
+                    
+                    <b>store.csv</b> : fundamental information about 45 Walmart stores, including their type and size.<br>
+                    
+                    <style>
+                      table {
+                        width: 50%; /* Adjust the width as needed */
+                      }
+                    </style>
+                    
+                    <table border="1">
+                      <thead>
+                        <tr>
+                          <th>Store</th>
+                          <th>Type</th>
+                          <th>Size</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>A</td>
+                          <td>151315</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>A</td>
+                          <td>202307</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>B</td>
+                          <td>37392</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>A</td>
+                          <td>205863</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>B</td>
+                          <td>34875</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <br>
+
+                    
+                    
+                    <p>
+                    <b>train.csv</b> : Historical training data, which covers to 2010-02-05 to 2012-11-01. There are 421570 rows with 5 columns.<br>
+                    <table border="1">
+                      <thead>
+                        <tr>
+                          <th>Store</th>
+                          <th>Dept</th>
+                          <th>Date</th>
+                          <th>Weekly Sales</th>
+                          <th>IsHoliday</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>2010-02-05</td>
+                          <td>24924.50</td>
+                          <td>False</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>2010-02-12</td>
+                          <td>46039.49</td>
+                          <td>True</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>2010-02-19</td>
+                          <td>41595.55</td>
+                          <td>False</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>2010-02-26</td>
+                          <td>19403.54</td>
+                          <td>False</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>2010-03-05</td>
+                          <td>21827.90</td>
+                          <td>False</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <br>
+                    
+                    
+                    <p>
+                    <b>features.csv</b> : Additional data related to the store, department, and regional activity. 8190 rows with 12 columns<br>
+                    <table border="1">
+                      <thead>
+                        <tr>
+                          <th>Store</th>
+                          <th>Date</th>
+                          <th>Temperature</th>
+                          <th>Fuel Price</th>
+                          <th>MarkDown1</th>
+                          <th>MarkDown2</th>
+                          <th>MarkDown3</th>
+                          <th>MarkDown4</th>
+                          <th>MarkDown5</th>
+                          <th>CPI</th>
+                          <th>Unemployment</th>
+                          <th>IsHoliday</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>2010-02-05</td>
+                          <td>42.31</td>
+                          <td>2.572</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>211.096358</td>
+                          <td>8.106</td>
+                          <td>False</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>2010-02-12</td>
+                          <td>38.51</td>
+                          <td>2.548</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>211.242170</td>
+                          <td>8.106</td>
+                          <td>True</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>2010-02-19</td>
+                          <td>39.93</td>
+                          <td>2.514</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>211.289143</td>
+                          <td>8.106</td>
+                          <td>False</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>2010-02-26</td>
+                          <td>46.63</td>
+                          <td>2.561</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>211.319643</td>
+                          <td>8.106</td>
+                          <td>False</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>2010-03-05</td>
+                          <td>46.50</td>
+                          <td>2.625</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>NaN</td>
+                          <td>211.350143</td>
+                          <td>8.106</td>
+                          <td>False</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p>
+                    <br>
+                    
+                    
+
+
+                    
+                    <p>
+                    <span style="font-size: 1.3em; font-weight: bold;">Data Preprocessing and Cleaning</span>
+                    <br>
+
+                    Upon examining the datasets, we identified missing values primarily in the 'features.csv' file, particularly in columns pertaining to markdowns, CPI, and unemployment (<span style="color:blue;">stores.isna().sum() = 0</span>).<br>
+                    Given the limited availability of markdown data (post-November 2011), we opted to exclude these columns from our analysis to ensure robust modeling.<br>
+                    For the remaining missing values in CPI and unemployment columns, accounting for approximately 7% of the dataset, we adopted a pragmatic approach by imputing the median values. (<span style="color:blue;">features['CPI'         ].fillna(features['CPI'         ].median(),inplace=True)</span>). This decision was informed by the relatively small proportion of missing values compared to the entire dataset, ensuring minimal impact on the integrity of the analysis. <br>
+                    <br>
+                    
+                    <span style="font-size: 1.3em; font-weight: bold;">Data Integration</span>
+                    <br>
+
+
+                    After cleaning and preprocessing, the data tables were consolidated into a single master table. Initially, we merged 'store.csv' and 'train.csv' using the 'Store' parameter as the linking key. Subsequently, 'features.csv' was incorporated into this amalgamated dataset, utilizing both 'Store' and 'Date' as reference points. (<span style="color:blue;">data = pd.merge(data,stores,on='Store',how='left')</span>).
+                    This fusion yielded a unified table containing 421,570 rows and 16 columns.
+                    <br>
+                    <br>
+                    <span style="font-size: 1.3em; font-weight: bold;">Exploratory Data Analysis</span>
+
+                    
+                    
+
+                    <p>
+                    Now we can explore data. This step provides us the general distribution of the data and ideas of how to implement the ML models.
+                    <div class="about-img-holder" style="margin-top: 0cm;">
+                        <div style="text-align: center;">
+                            <img src="./Walmart_fig1.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 100%; height: auto; margin-left: 1cm;">
+                        </div>
+                    </div>
+
+                    <p>
+                    Furthermore, we can observe Time Series features within the data.<br>
+                    Time series analysis identifies four key characteristics: Trend, Seasonality, Level, and Noise. <br>
+
+
+                    <div class="about-img-holder" style="margin-top: 0cm;">
+                        <div style="text-align: center;">
+                            <img src="./Walmart_fig2.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 150%; height: auto; margin-left: 1cm;">
+                        </div>
+                    </div>
+                    <p>
+                    
+                    It's evident that two variables, 'Weekly Sales' and 'Temperature,' exhibit pronounced seasonality, as anticipated. <br>
+                    Moreover, 'Fuel Price' and 'CPI' demonstrate a noticeable upward trend over time, while the Unemployment Rate exhibits a downward trend.
+                    
+                    
+                    
+                    
+                    <p>
+                    <span style="font-size: 1.3em; font-weight: bold;">Model Building</span>
+                    <br>
+                    
+                    After observing these trends, our dataset now contains 16 columns, primarily in numeric format (<span style="color:blue;">data.dtypes</span>). However, three variables ('Store', 'Dept', 'Type') are categorical, necessitating transformation to numeric formats (<span style="color:blue;">data_cat = pd.get_dummies(data_cat,columns=cat_col)</span>).
+                    <br>
+                    <br>
+                    Moreover, to facilitate model training and ensure balanced influence among features, it's essential to perform data normalization on the numeric variables (<span style="color:blue;">minmax_scale = MinMaxScaler(feature_range=(0, 1))
+</span>).
+                    <br>
+                    This process harmonizes feature scales, preventing larger-scale features from disproportionately impacting the model and enhancing convergence during training.
+                    <br>
+                    <br>
+                    Equally crucial is the selection of pertinent features for our model.
+                    Employing the Pearson correlation coefficient enables us to methodically identify the most influential variables for model training. By discerning the features with significant correlations, we can prioritize those that have the greatest impact, thereby enhancing the model's effectiveness and interpretability
+                    (<span style="color:blue;">corr = data[num_col].corr()</span>).
+                    
+   
+                    
+                    <div class="about-img-holder" style="margin-top: 0cm;">
+                        <div style="text-align: center;">
+                            <img src="./Walmart_fig3.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 160%; height: auto; margin-left: 1cm;">
+                        </div>
+                    </div>
+                    <p>
+                    Notably, our analysis reveals that the "Size" variable exhibits the strongest correlation with "Weekly_Sales," our target variable, underscoring its importance in our predictive model.
+                    <br> <br>
+                    
+                    <span style="font-size: 1.0em; font-weight: bold;">Traing and Test data spliting</span>
+                    <br>
+                    We partitioned the data into two distinct samples: the training and test samples.<br>
+                    The ratio between the training and test samples is 4:1, signifying that approximately 80% of the data comprise the training sample  (<span style="color:blue;">X_train,X_test,y_train,y_test = train_test_split(X,Y,test_size=0.20, random_state=50)</span>).
+                    It is noted that there is no strict rule regarding the ratio of training to test samples; however, this split allows for effective model training while ensuring robust evaluation on unseen data.
+ 
+                    <br>
+                    <br>
+                    <span style="font-size: 1.0em; font-weight: bold;">Model 1: Random Forest Regressor</span>
+                    <br>
+                    <br>
+                    The Random Forest Regressor is an ensemble algorithm that combines multiple decision trees to predict outcomes in regression tasks.
+                    By averaging predictions, it mitigates overfitting and offers robust performance, particularly suited for high-dimensional data.
+                    <br>
+                    <br>
+                    With pre-processed and split data, applying the Random Forest Regressor becomes straightforward.
+                    <br>
+                    <br>
+                    <span style="color:blue;">rf = RandomForestRegressor()</span>
+                    <br>
+                    <span style="color:blue;">rf.fit(X_train, y_train)</span>
+                    <br>
+                    <br>
+                    In this instance, we did not specify the number of estimators (trees) or the maximum depth of the trees. By default, the Random Forest employs 100 estimators, while the maximum depth is determined automatically based on the minimum number of data samples in leaf nodes. However, you can specify these values as needed (e.g., <span style="color:blue;">n_estimators=50</span> and <span style="color:blue;">min_samples_split = 5</span>).
+                    <br>
+                    <br>
+                    Upon execution, the processing of the Random Forest Regressor on my machine (<span style="color:blue;">MacPro, 3.3 GHz 12-Core Intel Xeon W</span>) consumed approximately 4 minutes. To gauge the model's efficacy, a swift evaluation revealed an impressive accuracy of 97.3%
+                    (<span style="color:blue;">random_forest_accuracy = rf.score(X_test,y_test)*100</span>). This performance metric underscores the model's capability to effectively capture patterns in the data and make accurate predictions.
+                    
+                    
+
+
+                    
+                    <br>
+                    <br>
+                    
+                    <span style="font-size: 1.0em; font-weight: bold;">Model 2: K-Nearest Neighbor (KNN) Regressor </span>
+                    <br>
+                    <br>
+                    <p>
+                    The K-Nearest Neighbors (KNN) Regressor is a simple yet effective algorithm used for regression tasks. It predicts the target variable by averaging the values of the k-nearest neighbors in the feature space. KNN regressor's performance heavily depends on the choice of the distance metric and the value of k, making it crucial to fine-tune these parameters for optimal results.
+                    <br>
+                    <br>
+                    We applied the KNN regressor with the following commands, which is in Python Scikit-Learn package.
+                    <br>
+                    <br>
+                    <span style="color:blue;">knn = KNeighborsRegressor(n_neighbors = 7,weights = 'uniform')</span>
+                    <br>
+                    <span style="color:blue;">knn.fit(X_train,y_train)</span>
+                    <br>
+                    <br>
+                    In this case, we selected a value of k=7, resulting in a model accuracy of 95%.
+                    Tuning the "K" value, known as hyperparameter tuning, significantly impacts the model's predictive ability. Our iterative exploration across k values ranging from 1 to 20 revealed that the model achieved its highest performance with a k value of 4.
+                    
+                    
+                
+                    
+                    <div class="about-img-holder" style="margin-top: 0cm;">
+                        <div style="text-align: center;">
+                            <img src="./Walmart_fig4.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 100%; height: auto; margin-left: 1cm;">
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    <span style="font-size: 1.3em; font-weight: bold;">Comparing the outputs</span>
+                    <br>
+                    <p>
+                    Finally, we compared the real and predicted 'Weekly Sales' variables between the Random Forest and KNN models.
+                    Both models reasonably predicted the real values, with slight differences observed in the residuals.
+                    While the Random Forest model exhibited smaller residuals, consistent with its higher accuracy, both models demonstrated accuracy exceeding 95%, indicating robust predictive capabilities.
+                    
+                    
+                    
+                    
+                    <div class="about-img-holder" style="margin-top: 0cm;">
+                        <div style="text-align: center;">
+                            <img src="./Walmart_fig5.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 200%; height: auto; margin-left: 1cm;">
+                        </div>
+                    </div>
+                    
+
+                   
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
+
+    <script>
+        document.getElementById("expand-icon").addEventListener("click", function() {
+            var image = document.getElementById("expandable-image");
+            if (image.classList.contains("expanded")) {
+                image.classList.remove("expanded");
+            } else {
+                image.classList.add("expanded");
+            }
+        });
+    </script>
+</body>
+</html>
