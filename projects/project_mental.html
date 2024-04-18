@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Meyawo Landing page | Free Bootstrap 4.3.x landing page</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+    <link rel="stylesheet" href="../assets/css/meyawo.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 12px; /* Adjust the font size as per your preference */
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e9e9e9;
+        }
+
+        #footnote {
+            text-align: left;
+            margin-left: 3cm;
+        }
+
+        #expandable-image {
+            display: none; /* Hide the image initially */
+        }
+
+        .expanded {
+            display: block !important; /* Show the image when expanded */
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="../index.html"><span class="gray-text">Home</span></a>
+
+
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+    
+    
+    <style>
+        .gray-text {
+            color: gray;
+        }
+    </style>
+    
+    
+    <section class="section pt-0" id="about">
+        <div class="container text-center">
+            <div class="about">
+                <div class="about-caption" style="max-width: calc(80% - 0cm); text-align: justify; padding-left: 3rem;">
+                    <h2 class="section-title mb-3" style="margin-top: 3cm;">Mental Health Analysis with NLP</h2>
+                    <p>
+                    In data science, datasets often contain both numerical and textual data, requiring analysis to extract insights. By combining text data analysis with numerical techniques, we can reveal important patterns and trends that deepen our understanding of complex phenomena. This integrated approach empowers decision-makers with a comprehensive understanding of the dataset.
+                    <br><br>
+                    Natural Language Processing (NLP) plays a vital role in managing textual data in data science, which frequently includes non-numerical formats. Utilizing NLP methods like sentiment analysis and topic modeling, we extract valuable insights from both textual and numerical data. This holistic approach not only identifies patterns but also enriches decision-making by providing a complete perspective, bridging the gap between quantitative metrics and qualitative textual nuances.
+                    
+                   
+                    
+
+                    <br>
+                    <br>
+                    <span style="font-size: 1.3em; font-weight: bold;">Datasets</span>
+                    <br>
+                    
+                    The Mental Health Corpus<sup><a href="#footnote1">1</a></sup> is a collection of texts from people facing mental health issues like anxiety and depression. It contains messages labeled to indicate whether they suggest <strong>mental health struggles (1) or not (0</strong>). Researchers and mental health professionals can utilize this data to explore language patterns related to mental health. It assists in tasks such as understanding sentiment, spotting harmful language, and analyzing mental health discussions. By examining these patterns, we can develop systems to detect early signs of mental distress and offer effective support.
+                    <br> <br>
+                    
+                    
+                    <!--<table style="width: 100%;" border="1"> -->
+                    <table style="width: 100%;" >
+
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Text</th>
+                                <th>Label</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>dear american teens question dutch person heard guys get way easier things learn age us sooooo thth graders like  right guys learn math</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>nothing look forward lifei dont many reasons keep going feel like nothing keeps going next day makes want hang myself</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>music recommendations im looking expand playlist usual genres alt pop minnesota hip hop steampunk various indie genres artists people like cavetown aliceband bug hunter penelope scott various rhymesayers willing explore new genresartists such anything generic rap the type exclusively sex drugs cool rapper is rap types pretty good pop popular couple years ago dunno technical genre name anyways anyone got music recommendations favorite artistssongs</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>im done trying feel betterthe reason im still alive know mum devastated ever killed myself ever passes im still state im going hesitate ending life shortly after im almost  take meds go therapy nothing seems help enough dont want around anymore hate feeling like this wouldnt wish upon enemy brain feels like constantly like static tv wont shut overthinking do think im running options dont see living past  got accepted health science degree dont even know wanna try know im smart mental illness holds back think cant anything im good enough need fucking help dont know anymore ive run options</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>worried  year old girl subject domestic physicalmental housewithout going lot know girl know girl etc let give brief background known girl  years lives uk live different country kept touch electronic means first girl schizophrenic host illnesses too dad severe anger issues abuses physically mentally makes serve food wash dishes clean house shouts beats petty things like spilling water picking toys floor threatened knife beats plates glasses punches head last time got beat around month ago one siblings gets beat up tried tell mother beating showed bruises too mother refuses believe even laughed off probably fear confronting him husband yells wife too  ...</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>hey rredflag sure right place post this goes  im currently student intern sandia national labs working survey help improve marketing outreach efforts many schools recruit around country were looking current undergradgrad stem students stem student know stem students would greatly appreciate help take pass along short survey thank you everyone helps take survey entered drawing chance win one three  amazon gcs</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <br>
+                    <p>
+                    The dataset contains 27,977 text messages. It's worth noting that the data is evenly split (i.e., balenced), with 14,139 instances indicating health struggles (50.5%) and 13,838 instances not indicating them (49.5%).
+                    
+                    
+
+                    
+                    <p>
+                    <span style="font-size: 1.3em; font-weight: bold;">Text Preprocessing</span>
+                    <br>
+                    Text preprocessing is a crucial step in Natural Language Processing (NLP) that involves cleaning and preparing textual data for further analysis. Below, we outline a step-by-step analysis using the initial text message:<br>
+                    <strong>"dear american teens question dutch person heard guys get way easier things learn age us sooooo thth graders like right guys learn math".</strong>
+                    <br>
+                    In the forthcoming analysis, we employed the Python module "nltk," widely recognized as a prominent tool in the realm of NLP (<span style="color:blue;">import nltk</span>).
+                    <br>
+                    <br>
+                    
+                    
+                    <span style="font-size: 1.0em; font-weight: bold;">1) Tokenization </span>
+                    <br>
+                    This is the process of splitting a text into smaller units, such as words, phrases, or characters, known as tokens.
+                    After tokenizing the initial text message (<span style="color:blue;">tokens = word_tokenize(text)</span>), it can be represented as follows:<br>
+                    <strong>['dear', 'american', 'teens', 'question', 'dutch', 'person', 'heard', 'guys', 'get', 'way', 'easier', 'things', 'learn', 'age', 'us', 'sooooo', 'thth', 'graders', 'like', 'right', 'guys', 'learn', 'math']</strong>
+
+                    <br>
+                    <br>
+                    <span style="font-size: 1.0em; font-weight: bold;">2) Stemming </span>
+                    <br>
+                    Words exhibit various forms and tenses. For instance, the verb "go" may appear as "go", "goes" "went", "gone", and 'going' in texts.
+                    It's essential to map them to their base or root form by removing suffixes (<span style="color:blue;">stemmed_token = stemmer.stem(tokens)</span>).
+                    <br>
+                    <strong>['dear', 'american', 'teen', 'question', 'dutch', 'person', 'heard', 'guy', 'get', 'way', 'easier', 'thing', 'learn', 'age', 'us', 'sooooo', 'thth', 'grader', 'like', 'right', 'guy', 'learn', 'math']</strong>
+                    <br>
+                    
+                    <br>
+                    <span style="font-size: 1.0em; font-weight: bold;">3) Filtering </span>
+                    <br>
+                    Filtering out tokens with a length less than 3 is a common preprocessing step in NLP. This helps reduce noise in the data by removing tokens with minimal semantic meaning, such as single characters or very short words (e.g., "a" and "us"). Additionally, it improves efficiency by reducing vocabulary size and subsequent processing time. Moreover, removing short tokens can enhance model performance by mitigating overfitting and focusing on more meaningful features.
+                    <br>
+                    <strong>['dear', 'american', 'teen', 'question', 'dutch', 'person', 'heard', 'guy', 'get', 'way', 'easier', 'thing', 'learn', 'age', 'sooooo', 'thth', 'grader', 'like', 'right', 'guy', 'learn', 'math']</strong>
+                    <br>
+                    <br>
+                    
+                    We applied these three steps to all 27,977 text messages. For a cursory examination, we segregated the text messages into two groups based on the label (1 = health struggles and 0 = normal) and generated word clouds
+                    (<span style="color:blue;">wordcloud = WordCloud.generate(text)</span>)
+                    
+. Notably, the text messages associated with mental health struggles (<strong>left</strong>) exhibit more occurrences of words like "feel," "like," and "know," whereas the other group (<strong>right</strong>) features more occurrences of words like "film" and "one."
+                    
+                    
+                    <div style="display: flex; justify-content: space-between;">
+                        <div class="about-img-holder" style="margin-top: 0cm; width: 48%;">
+                            <div style="text-align: center;">
+                                <img src="./nlp_fig1.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 90%; height: auto; margin-left: -1.5cm;">
+                            </div>
+                        </div>
+                        
+                        <div class="about-img-holder" style="margin-top: 0cm; width: 48%;">
+                            <div style="text-align: center;">
+                                <img src="./nlp_fig2.png" class="about-img" alt="Download free bootstrap 4 landing page, free bootstrap 4 templates, Download free bootstrap 4.1 landing page, free bootstrap 4.1.1 templates, meyawo Landing page" style="width: 90%; height: auto; margin-left: -3.5cm;">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <p>
+                    <br>
+                    <span style="font-size: 1.3em; font-weight: bold;">Vectorization</span>
+                    <br>
+                    <p>
+                    Vectorization is essential in NLP to convert textual data into numerical format, enabling machine learning algorithms to process them effectively. By transforming words or phrases into numerical vectors, vectorization facilitates tasks like sentiment analysis, text classification, and language modeling.
+                    <br>
+                    <br>
+                    In NLP, there are various methods to turn words into numerical forms, like Bag of Words (BoW), Term Frequency-Inverse Document Frequency (TF-IDF), and Word2Vec. Each has its pros and cons, particularly in how much information they convey and how efficiently they manage memory. Ideally, testing all these methods would help find the best one for our model, but that would be time-consuming. Therefore, for this project, we opted for TF-IDF, a popular choice in NLP.
+                    <br>
+                    <br>
+                    Implementing TF-IDF is straightforward in Python:<br><br>
+                    <span style="color:blue;">from sklearn.feature_extraction.text import TfidfVectorizer</span><br>
+                    <span style="color:blue;">tf=TfidfVectorizer()</span><br>
+                    <span style="color:blue;">data_vec=tf.fit_transform(text)</span>
+                    <br><br>
+                    This command yields a large sparse matrix, representing the vectorized form of the texts.  <br><br>
+                    (0, 29298)    0.21987335376865433 <br>
+                      (0, 39982)    0.11542773806418838 <br>
+                      (0, 27535)    0.07087011507761481 <br>
+                      (0, 19399)    0.324702507836242 <br>
+                      (0, 47933)    0.372419638753305 <br>
+                      (0, 44123)    0.33639795722210636 <br>
+                      (0, 936)    0.16631805303177516 <br>
+                      (0, 26996)    0.33555630114030005 <br>
+                      (0, 47494)    0.09441474711962639 <br>
+                      (0, 13703)    0.19490088675448738 <br>
+                      ... <br>
+                      <br>
+                      The size of the matrix is 27977 rows by 54449 columns, where each row corresponds to a text message, and each column represents a vectorized word. The sparse format is employed to conserve memory.<br>
+                      (Use this to covert to a normal dense array: <span style="color:blue;">dense_array = data_vec.toarray()</span>)
+                      
+                    <br> <br>
+                    <span style="font-size: 1.3em; font-weight: bold;">Model Building</span>
+                    <br>
+                    Once the text data has been vectorized, the next step is to construct a predictive model. Since we have labeled data indicating the true values, we opt for supervised learning. The dataset is divided into two subsets: the training set and the test set, accomplished using the train_test_split function from the sklearn package.
+                    <br>
+                    <br>
+                    <span style="color:blue;">from sklearn.model_selection import train_test_split</span>
+                    <br>
+                    <span style="color:blue;">x_train,x_test,y_train,y_test=train_test_split(data_vec,y,test_size=0.3,random_state=1)</span>
+                    <br>
+                    <br>
+                    In this instance, a test size of 0.3 was chosen to allocate 30% of the data to the test set, leaving the remaining 70% for training.
+                    <br>
+                    <br>
+                    For modeling, a Support Vector Machine (SVM) classifier is employed. SVMs are known for their effectiveness in handling high-dimensional data and binary classification tasks. <br>
+                    <br>
+                    <span style="color:blue;">from sklearn.svm import SVC</span><br>
+                    <span style="color:blue;">svm = SVC()</span><br>
+                        <span style="color:blue;">svm.fit(x_train,y_train)</span><br>
+                            <span style="color:blue;">y_pred=svm.predict(x_test)</span><br>
+                            <br>
+                            The model is trained on the training set (x_train and y_train), leveraging the SVM algorithm to learn patterns from the vectorized text data. Subsequently, predictions are generated for the test set (x_test).
+                            <br>
+                            <br>
+                            
+                            Upon evaluation, the model achieves an overall accuracy of 92%. Furthermore, when examining the performance across different labels, it is observed that the accuracy for label 0 data is 92%, while for label 1 data, it is slightly lower at 91%.
+                            <br>
+                            <br>
+                            Below are 10 example texts along with their labels and predictions.<br>
+                            (1 : mental health struggles, 0 : normal)
+                            <br>
+                    
+                    
+                    <table style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Text</th>
+                                <th>Label</th>
+                                <th>Predicted</th> <!-- New column -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>got nudes person might might know snapchat do ok chick dont know added snap sent something opened nudes dont even know person thought might know school couldnt find yearbook im sure wrong person actually knows me cuz idea is looks age im  tf respond this</td>
+                                <td>0</td>
+                                <td>0</td> <!-- New data -->
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>whats point princess bridei really think like wesley said pb life pain ampxb life sucks hurts live get better joy temporary think people happy successful fulfilled lives thats cards me wish dead every day keep wishing dead go bed wanting wake up think various ways commit redflag looks like accident ive settled single vehicle car accident bridge brick wall telephone pole note cant say suicde accident hiking mountain  live lot mountains hiking places accidently fall of already like hike bc suspicious ampxb look like accident insurance reasons kids want thinking okay ampxb hate passionately want die</td>
+                                <td>1</td>
+                                <td>1</td> <!-- New data -->
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>cant get dog think ill kill myselfthe last thing im holding for yup first two applications didnt work already received many one looking for sent third one different place dont hopes high up</td>
+                                <td>1</td>
+                                <td>1</td> <!-- New data -->
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>okay definetly need hear guys opinion ive pretty much love one best friends now im m shes f met lot summer pretty much always asked wanted meet always wanted never asked me also slow responds messages shes slow reply others too know asked friends think forgets reply sometimes asked one mutual friends ask interested something hung much said saw friend didnt speak month half got snap asking could call me said yes course talked school random stuff  minutes since called talked least every week started answering .... </td>
+                                <td>0</td>
+                                <td>0</td> <!-- New data -->
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>posting everyday people stop caring  religion matter private thing allowed share it force others also people treated diferently religions belief pearson stopped seeks harm humans care others religions</td>
+                                <td>0</td>
+                                <td>0</td> <!-- New data -->
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>hell sounds better heaven heaven pray shit hell demon girls hellhounds and sinners go  big sexy time orgy sex also afraid heights heaven would torture</td>
+                                <td>0</td>
+                                <td>0</td> <!-- New data -->
+                            </tr>
+                            
+                            <tr>
+                                <td>7</td>
+                                <td>back school guess ive coop goat farm quad  today last day next week march break that back actual school back schoolwork back sitting class praying nobody looks me back uniforms back getting bus every morning am back heart race every time male teacher purposely walks behind stairs uniform kilts fucking short asscheeks almost hanging short back literally wear kilts pants designed fit female bodies back around racisttransphobic people back hearing awful shittalking bathroom back vice principal ....</td>
+                                <td>0</td>
+                                <td>0</td> <!-- New data -->
+                            </tr>
+                            
+                            <tr>
+                                <td>8</td>
+                                <td>sleep stay awake last night decided stay day fix sleep schedule bc ducked start school  days  pm rn im feeling kinda tired sleep atleast take nap stay awake</td>
+                                <td>0</td>
+                                <td>0</td> <!-- New data -->
+                            </tr>
+                            
+                            <tr>
+                                <td>9</td>
+                                <td>wanna dieim shitty feel shitty time constantly make people feel shitty somehow cant fix fucked mentality take take take never give back im impossible yet people still put fucking time one unselfish thing make sure never deal stupid ugly horrid toxic ass ever even worst point cant bring go process ending all im bitch pain wish button could push would make ....</td>
+                                <td>1</td>
+                                <td>1</td> <!-- New data -->
+                            </tr>
+                            
+                            <tr>
+                                <td>10</td>
+                                <td>forget from color among us hat one im cyan wear leaf hat backup color lime</td>
+                                <td>0</td>
+                                <td>0</td> <!-- New data -->
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    
+                    
+     
+                    
+                    <div id="footnote1">
+                      <p>1. https://www.kaggle.com/datasets/reihanenamdari/mental-health-corpus/data</p>
+                    </div>
+                   
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
+    
+
+    <script>
+        document.getElementById("expand-icon").addEventListener("click", function() {
+            var image = document.getElementById("expandable-image");
+            if (image.classList.contains("expanded")) {
+                image.classList.remove("expanded");
+            } else {
+                image.classList.add("expanded");
+            }
+        });
+    </script>
+</body>
+</html>
